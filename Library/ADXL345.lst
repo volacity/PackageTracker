@@ -1,0 +1,381 @@
+   1              		.file	"ADXL345.c"
+   9              	.Ltext0:
+  10              		.align	2
+  11              		.global	powerdownAccel
+  13              	powerdownAccel:
+  14              	.LFB6:
+  15              		.file 1 "../Library/ADXL345.c"
+   1:../Library/ADXL345.c **** /*
+   2:../Library/ADXL345.c **** 	ADXL345 Library
+   3:../Library/ADXL345.c **** 	
+   4:../Library/ADXL345.c **** 	This libary contains functions to interact with the ADXL345 Triple Axis Digital Accelerometer from
+   5:../Library/ADXL345.c **** 	In order to use this libary, define the appropriate pins in the ADXL345.h file
+   6:../Library/ADXL345.c **** 
+   7:../Library/ADXL345.c **** 	created 20 Aug 2009
+   8:../Library/ADXL345.c **** 	by Ryan Owens
+   9:../Library/ADXL345.c **** 	http://www.sparkfun.com
+  10:../Library/ADXL345.c ****  
+  11:../Library/ADXL345.c **** */
+  12:../Library/ADXL345.c **** #include "ADXL345.h"
+  13:../Library/ADXL345.c **** #include <stdlib.h>
+  14:../Library/ADXL345.c **** #include <stdio.h>
+  15:../Library/ADXL345.c **** #include "LPC214x.h"
+  16:../Library/ADXL345.c **** #include "spi0.h"
+  17:../Library/ADXL345.c **** #include "PackageTracker.h"
+  18:../Library/ADXL345.c **** #include "rprintf.h"
+  19:../Library/ADXL345.c **** 
+  20:../Library/ADXL345.c **** 
+  21:../Library/ADXL345.c **** void initAccel(void){
+  22:../Library/ADXL345.c **** 
+  23:../Library/ADXL345.c **** 	adxl345_write(DATA_FORMAT, RANGE_1);	//Configure the Accelerometer for +/-8g
+  24:../Library/ADXL345.c **** 	
+  25:../Library/ADXL345.c **** 	//Set Accel. to Interrupt.  Interrupt will occur on EINT2 pin.
+  26:../Library/ADXL345.c **** 	adxl345_write(THRESH_FF, 0x0E);			//Set Accelerometer Threshold to 600 mg
+  27:../Library/ADXL345.c **** 	//adxl345_write(THRESH_FF, 0x14);			//Set Accelerometer Threshold to 600 mg
+  28:../Library/ADXL345.c **** 	
+  29:../Library/ADXL345.c **** 	adxl345_write(TIME_FF, 0x0A);			//Free Fall will trigger after falling for a minimum of  100ms.	
+  30:../Library/ADXL345.c **** 	
+  31:../Library/ADXL345.c **** 	adxl345_write(BW_RATE, 0x07);			//Set Output Rate to 100 Hz
+  32:../Library/ADXL345.c **** 	adxl345_write(INT_MAP, ~FREE_FALL);		//Map the Free Fall interrupt to pin INT1; all other interrup
+  33:../Library/ADXL345.c **** 	adxl345_write(INT_ENABLE, FREE_FALL);	//Activate the 'Free Fall' Interrupt
+  34:../Library/ADXL345.c **** 	adxl345_write(POWER_CTL, MEASURE);		//Put the Accelerometer into measurement mode	
+  35:../Library/ADXL345.c **** }
+  36:../Library/ADXL345.c **** 
+  37:../Library/ADXL345.c **** int accelX(void){
+  38:../Library/ADXL345.c **** 	char high_byte, low_byte=0;
+  39:../Library/ADXL345.c **** 	int value=0;
+  40:../Library/ADXL345.c **** 	
+  41:../Library/ADXL345.c **** 	high_byte = adxl345_read(DATAX1);
+  42:../Library/ADXL345.c **** 	low_byte = adxl345_read(DATAX0);
+  43:../Library/ADXL345.c **** 	value = (high_byte << 8) | low_byte;	
+  44:../Library/ADXL345.c **** 	
+  45:../Library/ADXL345.c **** 	return value;
+  46:../Library/ADXL345.c **** }	
+  47:../Library/ADXL345.c **** 
+  48:../Library/ADXL345.c **** int accelY(void){	
+  49:../Library/ADXL345.c **** 	char high_byte, low_byte=0;
+  50:../Library/ADXL345.c **** 	int value=0;
+  51:../Library/ADXL345.c **** 	
+  52:../Library/ADXL345.c **** 	high_byte = adxl345_read(DATAY1);
+  53:../Library/ADXL345.c **** 	low_byte = adxl345_read(DATAY0);
+  54:../Library/ADXL345.c **** 	value = (high_byte << 8) | low_byte;	
+  55:../Library/ADXL345.c **** 	
+  56:../Library/ADXL345.c **** 	return value;
+  57:../Library/ADXL345.c **** }
+  58:../Library/ADXL345.c **** 
+  59:../Library/ADXL345.c **** int accelZ(void){	
+  60:../Library/ADXL345.c **** 	char high_byte, low_byte=0;
+  61:../Library/ADXL345.c **** 	int value=0;
+  62:../Library/ADXL345.c **** 	
+  63:../Library/ADXL345.c **** 	high_byte = adxl345_read(DATAZ1);
+  64:../Library/ADXL345.c **** 	low_byte = adxl345_read(DATAZ0);
+  65:../Library/ADXL345.c **** 	value = (high_byte << 8) | low_byte;	
+  66:../Library/ADXL345.c **** 	
+  67:../Library/ADXL345.c **** 	return value;
+  68:../Library/ADXL345.c **** }
+  69:../Library/ADXL345.c **** 
+  70:../Library/ADXL345.c **** void powerdownAccel(void){
+  16              	 Function supports interworking.
+  17              		@ args = 0, pretend = 0, frame = 0
+  18              		@ frame_needed = 0, uses_anonymous_args = 0
+  19              		@ link register save eliminated.
+  20              		.loc 1 71 0
+  71:../Library/ADXL345.c **** 	SelectAccelerometer();
+  21              	r2, .L3
+  22 0000 0C209FE5 		mov	r3, #131072
+  23 0004 0238A0E3 		str	r3, [r2, #12]
+  24 0008 0C3082E5 		.loc 1 70 0
+  25              		@ lr needed for prologue
+  26              		.loc 1 74 0
+  72:../Library/ADXL345.c **** 	//SPI0_send(WRITE | Ctrl_Reg1);
+  73:../Library/ADXL345.c **** 	//SPI0_send(~PD);
+  74:../Library/ADXL345.c **** 	UnselectAccelerometer();
+  27              	3, [r2, #4]
+  28 000c 043082E5 		.loc 1 75 0
+  75:../Library/ADXL345.c **** }
+  29              	x	lr
+  30 0010 1EFF2FE1 	.L4:
+  31              		.align	2
+  32              	.L3:
+  33              		.word	-536707072
+  34 0014 008002E0 	.LFE6:
+  36              		.align	2
+  37              		.global	adxl345_write
+  39              	adxl345_write:
+  40              	.LFB8:
+  41              		.loc 1 96 0
+  76:../Library/ADXL345.c **** 
+  77:../Library/ADXL345.c **** char adxl345_read(char register_address){
+  78:../Library/ADXL345.c **** 	char read_address=0x80 | register_address;
+  79:../Library/ADXL345.c **** 	char register_value=0;
+  80:../Library/ADXL345.c **** 	int spcr_setting=0;
+  81:../Library/ADXL345.c **** 	
+  82:../Library/ADXL345.c **** 	spcr_setting = S0SPCR;	//Save the current SPI Control Register Settings
+  83:../Library/ADXL345.c **** 	S0SPCR  = 0x38;         // Master, no interrupt enable, 8 bits, Active Low SCK pin, CPHA=1	
+  84:../Library/ADXL345.c **** 		
+  85:../Library/ADXL345.c **** 	SelectAccelerometer();
+  86:../Library/ADXL345.c **** 	delay_ms(1);
+  87:../Library/ADXL345.c **** 	SPI0_send(read_address);
+  88:../Library/ADXL345.c **** 	register_value=SPI0_recv();
+  89:../Library/ADXL345.c **** 	delay_ms(1);
+  90:../Library/ADXL345.c **** 	UnselectAccelerometer();
+  91:../Library/ADXL345.c **** 	
+  92:../Library/ADXL345.c **** 	S0SPCR = spcr_setting;
+  93:../Library/ADXL345.c **** 	return register_value;
+  94:../Library/ADXL345.c **** }
+  95:../Library/ADXL345.c **** 
+  96:../Library/ADXL345.c **** void adxl345_write(char register_address, char register_value){
+  42              	upports interworking.
+  43              		@ args = 0, pretend = 0, frame = 0
+  44              		@ frame_needed = 0, uses_anonymous_args = 0
+  45              	.LVL0:
+  46              		stmfd	sp!, {r4, r5, r6, r7, r8, sl, lr}
+  47 0018 F0452DE9 	.LCFI0:
+  48              		.loc 1 99 0
+  97:../Library/ADXL345.c **** 	int spcr_setting=0;
+  98:../Library/ADXL345.c **** 	
+  99:../Library/ADXL345.c **** 	spcr_setting = S0SPCR;	//Save the current SPI Control Register Settings
+  49              	, .L7
+  50 001c 4C609FE5 		.loc 1 102 0
+ 100:../Library/ADXL345.c **** 	S0SPCR  = 0x38;         // Master, no interrupt enable, 8 bits, Active Low SCK pin, CPHA=1	
+ 101:../Library/ADXL345.c **** 		
+ 102:../Library/ADXL345.c **** 	SelectAccelerometer();
+  51              	dr	r8, .L7+4
+  52 0020 4C809FE5 		.loc 1 100 0
+  53              		mov	r3, #56
+  54 0024 3830A0E3 		.loc 1 102 0
+  55              		mov	r7, #131072
+  56 0028 0278A0E3 		.loc 1 99 0
+  57              		ldr	sl, [r6, #0]
+  58 002c 00A096E5 		.loc 1 96 0
+  59              		and	r5, r0, #255
+  60 0030 FF5000E2 		.loc 1 100 0
+  61              		str	r3, [r6, #0]
+  62 0034 003086E5 		.loc 1 103 0
+ 103:../Library/ADXL345.c **** 	delay_ms(1);
+  63              	.LVL1:
+  64 0038 0100A0E3 		.loc 1 102 0
+  65              		str	r7, [r8, #12]
+  66              		.loc 1 96 0
+  67 003c 0C7088E5 		and	r4, r1, #255
+  68              		.loc 1 103 0
+  69 0040 FF4001E2 		bl	delay_ms
+  70              	.LVL2:
+  71 0044 FEFFFFEB 		.loc 1 104 0
+  72              		mov	r0, r5
+ 104:../Library/ADXL345.c **** 	SPI0_send(register_address);
+  73              	end
+  74 0048 0500A0E1 		.loc 1 105 0
+  75 004c FEFFFFEB 		mov	r0, r4
+ 105:../Library/ADXL345.c **** 	SPI0_send(register_value);
+  76              		SPI0_send
+  77 0050 0400A0E1 		.loc 1 106 0
+  78 0054 FEFFFFEB 		mov	r0, #1
+ 106:../Library/ADXL345.c **** 	delay_ms(1);
+  79              		delay_ms
+  80 0058 0100A0E3 		.loc 1 107 0
+  81 005c FEFFFFEB 		str	r7, [r8, #4]
+ 107:../Library/ADXL345.c **** 	UnselectAccelerometer();
+  82              	oc 1 109 0
+  83 0060 047088E5 		str	sl, [r6, #0]
+ 108:../Library/ADXL345.c **** 	
+ 109:../Library/ADXL345.c **** 	S0SPCR = spcr_setting;
+  84              	loc 1 110 0
+  85 0064 00A086E5 		ldmfd	sp!, {r4, r5, r6, r7, r8, sl, lr}
+ 110:../Library/ADXL345.c **** }
+  86              	x	lr
+  87 0068 F045BDE8 	.L8:
+  88 006c 1EFF2FE1 		.align	2
+  89              	.L7:
+  90              		.word	-536739840
+  91              		.word	-536707072
+  92 0070 000002E0 	.LFE8:
+  94              		.align	2
+  95              		.global	initAccel
+  97              	initAccel:
+  98              	.LFB2:
+  99              		.loc 1 21 0
+ 100              		@ Function supports interworking.
+ 101              		@ args = 0, pretend = 0, frame = 0
+ 102              		@ frame_needed = 0, uses_anonymous_args = 0
+ 103              		str	lr, [sp, #-4]!
+ 104              	.LCFI1:
+ 105 0078 04E02DE5 		.loc 1 23 0
+ 106              		mov	r0, #49
+ 107              		mov	r1, #2
+ 108 007c 3100A0E3 		bl	adxl345_write
+ 109 0080 0210A0E3 		.loc 1 26 0
+ 110 0084 FEFFFFEB 		mov	r0, #40
+ 111              		mov	r1, #14
+ 112 0088 2800A0E3 		bl	adxl345_write
+ 113 008c 0E10A0E3 		.loc 1 29 0
+ 114 0090 FEFFFFEB 		mov	r0, #41
+ 115              		mov	r1, #10
+ 116 0094 2900A0E3 		bl	adxl345_write
+ 117 0098 0A10A0E3 		.loc 1 31 0
+ 118 009c FEFFFFEB 		mov	r0, #44
+ 119              		mov	r1, #7
+ 120 00a0 2C00A0E3 		bl	adxl345_write
+ 121 00a4 0710A0E3 		.loc 1 32 0
+ 122 00a8 FEFFFFEB 		mov	r0, #47
+ 123              		mov	r1, #251
+ 124 00ac 2F00A0E3 		bl	adxl345_write
+ 125 00b0 FB10A0E3 		.loc 1 33 0
+ 126 00b4 FEFFFFEB 		mov	r0, #46
+ 127              		mov	r1, #4
+ 128 00b8 2E00A0E3 		bl	adxl345_write
+ 129 00bc 0410A0E3 		.loc 1 34 0
+ 130 00c0 FEFFFFEB 		mov	r0, #45
+ 131              		mov	r1, #8
+ 132 00c4 2D00A0E3 		.loc 1 35 0
+ 133 00c8 0810A0E3 		ldr	lr, [sp], #4
+ 134              		.loc 1 34 0
+ 135 00cc 04E09DE4 		b	adxl345_write
+ 136              	.LFE2:
+ 138              		.align	2
+ 139              		.global	adxl345_read
+ 141              	adxl345_read:
+ 142              	.LFB7:
+ 143              		.loc 1 77 0
+ 144              		@ Function supports interworking.
+ 145              		@ args = 0, pretend = 0, frame = 0
+ 146              		@ frame_needed = 0, uses_anonymous_args = 0
+ 147              	.LVL3:
+ 148              		stmfd	sp!, {r4, r5, r6, r7, r8, lr}
+ 149              	.LCFI2:
+ 150 00d4 F0412DE9 		.loc 1 82 0
+ 151              		ldr	r5, .L13
+ 152              		.loc 1 85 0
+ 153 00d8 4C509FE5 		ldr	r7, .L13+4
+ 154              		.loc 1 83 0
+ 155 00dc 4C709FE5 		mov	r3, #56
+ 156              		.loc 1 85 0
+ 157 00e0 3830A0E3 		mov	r6, #131072
+ 158              		.loc 1 82 0
+ 159 00e4 0268A0E3 		ldr	r8, [r5, #0]
+ 160              		.loc 1 77 0
+ 161 00e8 008095E5 		and	r4, r0, #255
+ 162              		.loc 1 83 0
+ 163 00ec FF4000E2 		str	r3, [r5, #0]
+ 164              		.loc 1 86 0
+ 165 00f0 003085E5 		mov	r0, #1
+ 166              	.LVL4:
+ 167 00f4 0100A0E3 		.loc 1 85 0
+ 168              		str	r6, [r7, #12]
+ 169              		.loc 1 86 0
+ 170 00f8 0C6087E5 		bl	delay_ms
+ 171              		.loc 1 87 0
+ 172 00fc FEFFFFEB 		orr	r0, r4, #128
+ 173              		bl	SPI0_send
+ 174 0100 800084E3 		.loc 1 88 0
+ 175 0104 FEFFFFEB 		bl	SPI0_recv
+ 176              		mov	r4, r0
+ 177 0108 FEFFFFEB 	.LVL5:
+ 178 010c 0040A0E1 		.loc 1 89 0
+ 179              		mov	r0, #1
+ 180              		bl	delay_ms
+ 181 0110 0100A0E3 		.loc 1 94 0
+ 182 0114 FEFFFFEB 		mov	r0, r4
+ 183              		.loc 1 90 0
+ 184 0118 0400A0E1 		str	r6, [r7, #4]
+ 185              		.loc 1 92 0
+ 186 011c 046087E5 		str	r8, [r5, #0]
+ 187              		.loc 1 94 0
+ 188 0120 008085E5 		ldmfd	sp!, {r4, r5, r6, r7, r8, lr}
+ 189              		bx	lr
+ 190 0124 F041BDE8 	.L14:
+ 191 0128 1EFF2FE1 		.align	2
+ 192              	.L13:
+ 193              		.word	-536739840
+ 194              		.word	-536707072
+ 195 012c 000002E0 	.LFE7:
+ 197              		.align	2
+ 198              		.global	accelZ
+ 200              	accelZ:
+ 201              	.LFB5:
+ 202              		.loc 1 59 0
+ 203              		@ Function supports interworking.
+ 204              		@ args = 0, pretend = 0, frame = 0
+ 205              		@ frame_needed = 0, uses_anonymous_args = 0
+ 206              		stmfd	sp!, {r4, lr}
+ 207              	.LCFI3:
+ 208 0134 10402DE9 		.loc 1 63 0
+ 209              		mov	r0, #55
+ 210              		bl	adxl345_read
+ 211 0138 3700A0E3 		mov	r4, r0
+ 212 013c FEFFFFEB 		.loc 1 64 0
+ 213 0140 0040A0E1 		mov	r0, #54
+ 214              		bl	adxl345_read
+ 215 0144 3600A0E3 		.loc 1 68 0
+ 216 0148 FEFFFFEB 		orr	r0, r0, r4, asl #8
+ 217              		ldmfd	sp!, {r4, lr}
+ 218 014c 040480E1 		bx	lr
+ 219 0150 1040BDE8 	.LFE5:
+ 221              		.align	2
+ 222              		.global	accelY
+ 224              	accelY:
+ 225              	.LFB4:
+ 226              		.loc 1 48 0
+ 227              		@ Function supports interworking.
+ 228              		@ args = 0, pretend = 0, frame = 0
+ 229              		@ frame_needed = 0, uses_anonymous_args = 0
+ 230              		stmfd	sp!, {r4, lr}
+ 231              	.LCFI4:
+ 232 0158 10402DE9 		.loc 1 52 0
+ 233              		mov	r0, #53
+ 234              		bl	adxl345_read
+ 235 015c 3500A0E3 		mov	r4, r0
+ 236 0160 FEFFFFEB 		.loc 1 53 0
+ 237 0164 0040A0E1 		mov	r0, #52
+ 238              		bl	adxl345_read
+ 239 0168 3400A0E3 		.loc 1 57 0
+ 240 016c FEFFFFEB 		orr	r0, r0, r4, asl #8
+ 241              		ldmfd	sp!, {r4, lr}
+ 242 0170 040480E1 		bx	lr
+ 243 0174 1040BDE8 	.LFE4:
+ 245              		.align	2
+ 246              		.global	accelX
+ 248              	accelX:
+ 249              	.LFB3:
+ 250              		.loc 1 37 0
+ 251              		@ Function supports interworking.
+ 252              		@ args = 0, pretend = 0, frame = 0
+ 253              		@ frame_needed = 0, uses_anonymous_args = 0
+ 254              		stmfd	sp!, {r4, lr}
+ 255              	.LCFI5:
+ 256 017c 10402DE9 		.loc 1 41 0
+ 257              		mov	r0, #51
+ 258              		bl	adxl345_read
+ 259 0180 3300A0E3 		mov	r4, r0
+ 260 0184 FEFFFFEB 		.loc 1 42 0
+ 261 0188 0040A0E1 		mov	r0, #50
+ 262              		bl	adxl345_read
+ 263 018c 3200A0E3 		.loc 1 46 0
+ 264 0190 FEFFFFEB 		orr	r0, r0, r4, asl #8
+ 265              		ldmfd	sp!, {r4, lr}
+ 266 0194 040480E1 		bx	lr
+ 267 0198 1040BDE8 	.LFE3:
+ 269              		.section	.debug_frame,"",%progbits
+ 270              	.Lframe0:
+ 407              	.Ldebug_loc0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 ADXL345.c
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccItbaaa.s:13     .text:00000000 powerdownAccel
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccItbaaa.s:22     .text:00000000 $a
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccItbaaa.s:34     .text:00000014 $d
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccItbaaa.s:40     .text:00000018 adxl345_write
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccItbaaa.s:47     .text:00000018 $a
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccItbaaa.s:92     .text:00000070 $d
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccItbaaa.s:99     .text:00000078 initAccel
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccItbaaa.s:105    .text:00000078 $a
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccItbaaa.s:143    .text:000000d4 adxl345_read
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccItbaaa.s:195    .text:0000012c $d
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccItbaaa.s:202    .text:00000134 accelZ
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccItbaaa.s:208    .text:00000134 $a
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccItbaaa.s:226    .text:00000158 accelY
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccItbaaa.s:250    .text:0000017c accelX
+
+UNDEFINED SYMBOLS
+delay_ms
+SPI0_send
+SPI0_recv

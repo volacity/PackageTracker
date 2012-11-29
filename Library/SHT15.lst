@@ -1,0 +1,530 @@
+   1              		.file	"SHT15.c"
+   9              	.Ltext0:
+  10              		.align	2
+  11              		.global	sht15_start
+  13              	sht15_start:
+  14              	.LFB5:
+  15              		.file 1 "../Library/SHT15.c"
+   1:../Library/SHT15.c **** //**********************************************************
+   2:../Library/SHT15.c **** //
+   3:../Library/SHT15.c **** //             SHT15 Humidity Sensor Library
+   4:../Library/SHT15.c **** //						SHT15.c
+   5:../Library/SHT15.c **** //                     Ryan Owens
+   6:../Library/SHT15.c **** //			Copyright Sparkfun Electronics
+   7:../Library/SHT15.c **** //
+   8:../Library/SHT15.c **** //**********************************************************
+   9:../Library/SHT15.c **** #include "LPC214x.h"
+  10:../Library/SHT15.c **** #include "SHT15.h"
+  11:../Library/SHT15.c **** #include "PackageTracker.h" //Defines the I2C pins for communication
+  12:../Library/SHT15.c **** 							//with the SHT15
+  13:../Library/SHT15.c **** #include "serial.h"
+  14:../Library/SHT15.c **** #include "rprintf.h"
+  15:../Library/SHT15.c **** 							
+  16:../Library/SHT15.c **** //Read 8 bits from the SHT sensor
+  17:../Library/SHT15.c **** char sht15_read_byte(void)
+  18:../Library/SHT15.c **** {
+  19:../Library/SHT15.c ****     char in_byte = 0;
+  20:../Library/SHT15.c **** 
+  21:../Library/SHT15.c ****     IOCLR0 = I2C_SCL; //SHT_SCK = 0;
+  22:../Library/SHT15.c **** 
+  23:../Library/SHT15.c ****     IODIR0 &= ~I2C_SDA;	//Reading-SDA is an input;
+  24:../Library/SHT15.c **** 
+  25:../Library/SHT15.c ****     for(int j = 0 ; j < 8 ; j++)
+  26:../Library/SHT15.c ****     {
+  27:../Library/SHT15.c ****         IOCLR0 = I2C_SCL; //SHT_SCK = 0;
+  28:../Library/SHT15.c ****         delay_ms(SCL_DELAY);
+  29:../Library/SHT15.c ****         IOSET0 = I2C_SCL; //SHT_SCK = 1;
+  30:../Library/SHT15.c ****         delay_ms(SCL_DELAY);
+  31:../Library/SHT15.c **** 
+  32:../Library/SHT15.c ****         //Read bit off bus
+  33:../Library/SHT15.c **** 		in_byte = in_byte << 1;
+  34:../Library/SHT15.c ****         if (IOPIN0 & I2C_SDA)in_byte |= 1; //in_byte.0 = SHT_SDA;
+  35:../Library/SHT15.c ****     }
+  36:../Library/SHT15.c **** 
+  37:../Library/SHT15.c ****     //Send acknowledge to SHT15
+  38:../Library/SHT15.c ****     IOCLR0 = I2C_SCL; //SHT_SCK = 0;
+  39:../Library/SHT15.c **** 
+  40:../Library/SHT15.c ****     IODIR0 |= I2C_SDA;	//Done Reading-SDA is an output
+  41:../Library/SHT15.c ****     IOCLR0 = I2C_SDA;
+  42:../Library/SHT15.c ****     
+  43:../Library/SHT15.c ****     IOSET0 = I2C_SCL; 	//SHT_SCK = 1;
+  44:../Library/SHT15.c ****     delay_ms(SCL_DELAY);
+  45:../Library/SHT15.c ****     IOCLR0 = I2C_SCL; //SHT_SCK = 0; //Falling edge of 9th clock
+  46:../Library/SHT15.c ****     delay_ms(SCL_DELAY);
+  47:../Library/SHT15.c **** 
+  48:../Library/SHT15.c ****     return(in_byte);
+  49:../Library/SHT15.c **** }
+  50:../Library/SHT15.c **** 
+  51:../Library/SHT15.c **** void sht15_send_byte(char sht15_command)
+  52:../Library/SHT15.c **** {
+  53:../Library/SHT15.c **** 
+  54:../Library/SHT15.c ****     IODIR0 |= I2C_SDA; //Writing-SDA is an output;
+  55:../Library/SHT15.c **** 
+  56:../Library/SHT15.c ****     for(int i = 8 ; i > 0 ; i--)
+  57:../Library/SHT15.c ****     {
+  58:../Library/SHT15.c ****         IOCLR0 = I2C_SCL; //SHT_SCK = 0;
+  59:../Library/SHT15.c ****         delay_ms(SCL_DELAY);
+  60:../Library/SHT15.c ****         
+  61:../Library/SHT15.c ****         if(sht15_command & (1 << (i-1)))
+  62:../Library/SHT15.c ****         {
+  63:../Library/SHT15.c ****             IOSET0 = I2C_SDA;
+  64:../Library/SHT15.c ****         }
+  65:../Library/SHT15.c ****         else
+  66:../Library/SHT15.c ****         {
+  67:../Library/SHT15.c ****             IOCLR0 = I2C_SDA;
+  68:../Library/SHT15.c ****         }
+  69:../Library/SHT15.c **** 		//delay_ms(SCL_DELAY);
+  70:../Library/SHT15.c ****         IOSET0 = I2C_SCL; //SHT_SCK = 1;
+  71:../Library/SHT15.c ****         delay_ms(SCL_DELAY);
+  72:../Library/SHT15.c ****     }
+  73:../Library/SHT15.c ****     //Wait for SHT15 to acknowledge.
+  74:../Library/SHT15.c ****     IOCLR0 = I2C_SCL; //SHT_SCK = 0;
+  75:../Library/SHT15.c ****     //0 = input, 1 = output
+  76:../Library/SHT15.c ****     IODIR0 &= ~I2C_SDA;	//Done Reading-SDA is an input;	
+  77:../Library/SHT15.c **** 	
+  78:../Library/SHT15.c ****     while (IOPIN0 & I2C_SDA);	//Wait for SHT to pull line low
+  79:../Library/SHT15.c ****     IOSET0 = I2C_SCL; //SHT_SCK = 1;
+  80:../Library/SHT15.c ****     delay_ms(SCL_DELAY);
+  81:../Library/SHT15.c ****     IOCLR0 = I2C_SCL; //SHT_SCK = 0; //Falling edge of 9th clock
+  82:../Library/SHT15.c ****     delay_ms(SCL_DELAY);
+  83:../Library/SHT15.c **** 
+  84:../Library/SHT15.c **** }
+  85:../Library/SHT15.c **** 
+  86:../Library/SHT15.c **** //Init the sensor and read out the humidity and temperature data
+  87:../Library/SHT15.c **** void sht15_read(unsigned int *temperature, unsigned int *humidity)
+  88:../Library/SHT15.c **** {
+  89:../Library/SHT15.c ****     unsigned long int response, humidity_sqr, checksum;
+  90:../Library/SHT15.c ****     //================================================================	
+  91:../Library/SHT15.c **** 	//Check temperature
+  92:../Library/SHT15.c ****     //================================================================
+  93:../Library/SHT15.c **** 	sht15_start();
+  94:../Library/SHT15.c **** 	sht15_send_byte(CHECK_TEMP);
+  95:../Library/SHT15.c **** 	while (IOPIN0 & I2C_SDA); //Wait for SHT to finish measurement (SDA will be pulled low)
+  96:../Library/SHT15.c **** 	response = sht15_read_byte(); //Read 8MSB
+  97:../Library/SHT15.c **** 	response <<= 8;
+  98:../Library/SHT15.c **** 	response |= sht15_read_byte(); //Read 8LSB
+  99:../Library/SHT15.c **** 	*temperature = response * 18;
+ 100:../Library/SHT15.c **** 	
+ 101:../Library/SHT15.c **** 	response = sht15_read_byte();
+ 102:../Library/SHT15.c **** 	checksum = response;
+ 103:../Library/SHT15.c **** 	
+ 104:../Library/SHT15.c **** 	*temperature -= 39300;
+ 105:../Library/SHT15.c **** 	*temperature /= 10;
+ 106:../Library/SHT15.c **** 
+ 107:../Library/SHT15.c ****     //================================================================
+ 108:../Library/SHT15.c ****     //Check humidity
+ 109:../Library/SHT15.c ****     //================================================================
+ 110:../Library/SHT15.c **** 	sht15_start(); //Issue transmission start
+ 111:../Library/SHT15.c **** 	sht15_send_byte(CHECK_HUMD); //Now send command code
+ 112:../Library/SHT15.c **** 	//Wait for SHT15 to pull SDA low to signal measurement completion. 
+ 113:../Library/SHT15.c **** 	//This can take up to 210ms for 14 bit measurements
+ 114:../Library/SHT15.c **** 	while (IOPIN0 & I2C_SDA); //Wait for SHT to finish measurement (SDA will be pulled low)
+ 115:../Library/SHT15.c **** 
+ 116:../Library/SHT15.c **** 	response = sht15_read_byte(); //Read 8MSB
+ 117:../Library/SHT15.c **** 	response <<= 8;
+ 118:../Library/SHT15.c **** 	response |= sht15_read_byte(); //Read 8LSB
+ 119:../Library/SHT15.c **** 	*humidity = response; //767
+ 120:../Library/SHT15.c **** 	
+ 121:../Library/SHT15.c **** 	//One more "read" to get the checksum
+ 122:../Library/SHT15.c **** 	response = sht15_read_byte();
+ 123:../Library/SHT15.c **** 	checksum = response;
+ 124:../Library/SHT15.c **** 	
+ 125:../Library/SHT15.c **** 	humidity_sqr = *humidity * *humidity; //767 * 767 = 588289
+ 126:../Library/SHT15.c **** 	humidity_sqr *= 28; //588289 * 28 = 16,472,092
+ 127:../Library/SHT15.c **** 	humidity_sqr /= 100000; //16,472,092 / 10,000 = 16.47
+ 128:../Library/SHT15.c **** 
+ 129:../Library/SHT15.c **** 	*humidity *= 405; //767 * 405 = 310635
+ 130:../Library/SHT15.c **** 	*humidity /= 100; //310635 / 100 = 3106
+ 131:../Library/SHT15.c **** 
+ 132:../Library/SHT15.c **** 	*humidity = *humidity - humidity_sqr - 400; //3106 + 1647 - 400 = 4353
+ 133:../Library/SHT15.c **** 
+ 134:../Library/SHT15.c **** 	//rprintf("\nTemperature is %ld\n", *temperature);
+ 135:../Library/SHT15.c **** 	//rprintf("Humidity is %ld\n\n", *humidity);
+ 136:../Library/SHT15.c **** 
+ 137:../Library/SHT15.c **** }
+ 138:../Library/SHT15.c **** //Specific SHT start command
+ 139:../Library/SHT15.c **** void sht15_start(void)
+ 140:../Library/SHT15.c **** {
+  16              	@ Function supports interworking.
+  17              		@ args = 0, pretend = 0, frame = 0
+  18              		@ frame_needed = 0, uses_anonymous_args = 0
+  19              		stmfd	sp!, {r4, r5, r6, lr}
+  20 0000 70402DE9 	.LCFI0:
+  21              		.loc 1 141 0
+ 141:../Library/SHT15.c ****     IODIR0 |= I2C_SDA;	//Write-SDA is an output
+  22              	4, .L3
+  23 0004 64409FE5 		ldr	r3, [r4, #8]
+  24 0008 083094E5 		.loc 1 143 0
+ 142:../Library/SHT15.c ****     IOSET0 = I2C_SDA;; //SHT_SDA = 1;
+ 143:../Library/SHT15.c ****     IOSET0 = I2C_SCL; //SHT_SCK = 1;
+  25              	v	r5, #4
+  26 000c 0450A0E3 		.loc 1 141 0
+  27              		orr	r3, r3, #8
+  28 0010 083083E3 		.loc 1 142 0
+  29              		mov	r6, #8
+  30 0014 0860A0E3 		.loc 1 141 0
+  31              		str	r3, [r4, #8]
+  32 0018 083084E5 		.loc 1 144 0
+ 144:../Library/SHT15.c ****     delay_ms(SCL_DELAY);
+  33              	 #1
+  34 001c 0100A0E3 		.loc 1 142 0
+  35              		str	r6, [r4, #4]
+  36 0020 046084E5 		.loc 1 143 0
+  37              		str	r5, [r4, #4]
+  38 0024 045084E5 		.loc 1 144 0
+  39              		bl	delay_ms
+  40 0028 FEFFFFEB 		.loc 1 147 0
+ 145:../Library/SHT15.c **** 
+ 146:../Library/SHT15.c ****     IOCLR0 = I2C_SDA; //SHT_SDA = 0;
+ 147:../Library/SHT15.c ****     delay_ms(SCL_DELAY);
+  41              	 #1
+  42 002c 0100A0E3 		.loc 1 146 0
+  43              		str	r6, [r4, #12]
+  44 0030 0C6084E5 		.loc 1 147 0
+  45              		bl	delay_ms
+  46 0034 FEFFFFEB 		.loc 1 149 0
+ 148:../Library/SHT15.c ****     IOCLR0 = I2C_SCL; //SHT_SCK = 0;
+ 149:../Library/SHT15.c ****     delay_ms(SCL_DELAY);
+  47              	0, #1
+  48 0038 0100A0E3 		.loc 1 148 0
+  49              		str	r5, [r4, #12]
+  50 003c 0C5084E5 		.loc 1 149 0
+  51              		bl	delay_ms
+  52 0040 FEFFFFEB 		.loc 1 151 0
+ 150:../Library/SHT15.c ****     IOSET0 = I2C_SCL; //SHT_SCK = 1;
+ 151:../Library/SHT15.c ****     delay_ms(SCL_DELAY);
+  53              	0, #1
+  54 0044 0100A0E3 		.loc 1 150 0
+  55              		str	r5, [r4, #4]
+  56 0048 045084E5 		.loc 1 151 0
+  57              		bl	delay_ms
+  58 004c FEFFFFEB 		.loc 1 153 0
+ 152:../Library/SHT15.c ****     IOSET0 = I2C_SDA;; //SHT_SDA = 1;
+ 153:../Library/SHT15.c ****     delay_ms(SCL_DELAY);
+  59              	0, #1
+  60 0050 0100A0E3 		.loc 1 152 0
+  61              		str	r6, [r4, #4]
+  62 0054 046084E5 		.loc 1 153 0
+  63              		bl	delay_ms
+  64 0058 FEFFFFEB 		.loc 1 155 0
+ 154:../Library/SHT15.c ****     IOCLR0 = I2C_SCL; //SHT_SCK = 0;
+ 155:../Library/SHT15.c ****     delay_ms(SCL_DELAY);
+  65              	0, #1
+  66 005c 0100A0E3 		.loc 1 154 0
+  67              		str	r5, [r4, #12]
+  68 0060 0C5084E5 		.loc 1 155 0
+  69              		bl	delay_ms
+  70 0064 FEFFFFEB 		.loc 1 157 0
+ 156:../Library/SHT15.c **** 	
+ 157:../Library/SHT15.c **** }
+  71              		sp!, {r4, r5, r6, lr}
+  72 0068 7040BDE8 		bx	lr
+  73 006c 1EFF2FE1 	.L4:
+  74              		.align	2
+  75              	.L3:
+  76              		.word	-536707072
+  77 0070 008002E0 	.LFE5:
+  79              		.align	2
+  80              		.global	sht15_send_byte
+  82              	sht15_send_byte:
+  83              	.LFB3:
+  84              		.loc 1 52 0
+  85              		@ Function supports interworking.
+  86              		@ args = 0, pretend = 0, frame = 0
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88              	.LVL0:
+  89              		.loc 1 54 0
+  90              		ldr	r3, .L18
+  91 0074 A4309FE5 		ldr	r2, [r3, #8]
+  92 0078 082093E5 		orr	r2, r2, #8
+  93 007c 082082E3 		str	r2, [r3, #8]
+  94 0080 082083E5 		.loc 1 52 0
+  95              		stmfd	sp!, {r4, r5, r6, r7, lr}
+  96 0084 F0402DE9 	.LCFI1:
+  97              		.loc 1 52 0
+  98              		and	r7, r0, #255
+  99 0088 FF7000E2 		.loc 1 54 0
+ 100              		mov	r5, #8
+ 101 008c 0850A0E3 	.LVL1:
+ 102              	.LVL2:
+ 103              	.L6:
+ 104              	.LBB2:
+ 105              		.loc 1 58 0
+ 106              		ldr	r4, .L18
+ 107 0090 88409FE5 		mov	r3, #4
+ 108 0094 0430A0E3 		str	r3, [r4, #12]
+ 109 0098 0C3084E5 		.loc 1 61 0
+ 110              		sub	r5, r5, #1
+ 111 009c 015045E2 		.loc 1 59 0
+ 112              		mov	r0, #1
+ 113 00a0 0100A0E3 		bl	delay_ms
+ 114 00a4 FEFFFFEB 		.loc 1 61 0
+ 115              		mov	r3, r7, asr r5
+ 116 00a8 5735A0E1 		tst	r3, #1
+ 117 00ac 010013E3 		.loc 1 63 0
+ 118              		movne	r3, #8
+ 119 00b0 0830A013 		.loc 1 67 0
+ 120              		moveq	r3, #8
+ 121 00b4 0830A003 		.loc 1 63 0
+ 122              		strne	r3, [r4, #4]
+ 123 00b8 04308415 		.loc 1 67 0
+ 124              		streq	r3, [r4, #12]
+ 125 00bc 0C308405 		.loc 1 70 0
+ 126              		ldr	r4, .L18
+ 127 00c0 58409FE5 		mov	r6, #4
+ 128 00c4 0460A0E3 		.loc 1 71 0
+ 129              		mov	r0, #1
+ 130 00c8 0100A0E3 		.loc 1 70 0
+ 131              		str	r6, [r4, #4]
+ 132 00cc 046084E5 		.loc 1 71 0
+ 133              		bl	delay_ms
+ 134 00d0 FEFFFFEB 		.loc 1 56 0
+ 135              		cmp	r5, #0
+ 136 00d4 000055E3 		bne	.L6
+ 137 00d8 ECFFFF1A 	.LBE2:
+ 138              		.loc 1 74 0
+ 139              		str	r6, [r4, #12]
+ 140 00dc 0C6084E5 		.loc 1 76 0
+ 141              		ldr	r3, [r4, #8]
+ 142 00e0 083094E5 		bic	r3, r3, #8
+ 143 00e4 0830C3E3 		str	r3, [r4, #8]
+ 144 00e8 083084E5 	.L11:
+ 145              		.loc 1 78 0
+ 146              		ldr	r5, .L18
+ 147 00ec 2C509FE5 	.LVL3:
+ 148              		ldr	r3, [r5, #0]
+ 149 00f0 003095E5 		tst	r3, #8
+ 150 00f4 080013E3 		bne	.L11
+ 151 00f8 FBFFFF1A 		.loc 1 79 0
+ 152              		mov	r4, #4
+ 153 00fc 0440A0E3 		.loc 1 80 0
+ 154              		mov	r0, #1
+ 155 0100 0100A0E3 		.loc 1 79 0
+ 156              		str	r4, [r5, #4]
+ 157 0104 044085E5 		.loc 1 80 0
+ 158              		bl	delay_ms
+ 159 0108 FEFFFFEB 		.loc 1 82 0
+ 160              		mov	r0, #1
+ 161 010c 0100A0E3 		.loc 1 81 0
+ 162              		str	r4, [r5, #12]
+ 163 0110 0C4085E5 		.loc 1 82 0
+ 164              		bl	delay_ms
+ 165 0114 FEFFFFEB 		.loc 1 84 0
+ 166              		ldmfd	sp!, {r4, r5, r6, r7, lr}
+ 167 0118 F040BDE8 		bx	lr
+ 168 011c 1EFF2FE1 	.L19:
+ 169              		.align	2
+ 170              	.L18:
+ 171              		.word	-536707072
+ 172 0120 008002E0 	.LFE3:
+ 174              		.align	2
+ 175              		.global	sht15_read_byte
+ 177              	sht15_read_byte:
+ 178              	.LFB2:
+ 179              		.loc 1 18 0
+ 180              		@ Function supports interworking.
+ 181              		@ args = 0, pretend = 0, frame = 0
+ 182              		@ frame_needed = 0, uses_anonymous_args = 0
+ 183              		.loc 1 21 0
+ 184              		ldr	r2, .L28
+ 185 0124 94209FE5 		mov	r3, #4
+ 186 0128 0430A0E3 		str	r3, [r2, #12]
+ 187 012c 0C3082E5 		.loc 1 23 0
+ 188              		ldr	r3, [r2, #8]
+ 189 0130 083092E5 		bic	r3, r3, #8
+ 190 0134 0830C3E3 		.loc 1 18 0
+ 191              		stmfd	sp!, {r4, r5, r6, r7, lr}
+ 192 0138 F0402DE9 	.LCFI2:
+ 193              		.loc 1 23 0
+ 194              		str	r3, [r2, #8]
+ 195 013c 083082E5 		mov	r6, #0
+ 196 0140 0060A0E3 	.LVL4:
+ 197              		mov	r7, r6
+ 198 0144 0670A0E1 	.LVL5:
+ 199              	.L21:
+ 200              	.LBB3:
+ 201              		.loc 1 27 0
+ 202              		ldr	r4, .L28
+ 203 0148 70409FE5 		mov	r5, #4
+ 204 014c 0450A0E3 		.loc 1 28 0
+ 205              		mov	r0, #1
+ 206 0150 0100A0E3 		.loc 1 27 0
+ 207              		str	r5, [r4, #12]
+ 208 0154 0C5084E5 		.loc 1 28 0
+ 209              		bl	delay_ms
+ 210 0158 FEFFFFEB 		.loc 1 30 0
+ 211              		mov	r0, #1
+ 212 015c 0100A0E3 		.loc 1 29 0
+ 213              		str	r5, [r4, #4]
+ 214 0160 045084E5 		.loc 1 30 0
+ 215              		bl	delay_ms
+ 216 0164 FEFFFFEB 		.loc 1 34 0
+ 217              		ldr	r3, [r4, #0]
+ 218 0168 003094E5 		tst	r3, #8
+ 219 016c 080013E3 		.loc 1 33 0
+ 220              		mov	r3, r6, asl #1
+ 221 0170 8630A0E1 		.loc 1 25 0
+ 222              		add	r7, r7, #1
+ 223 0174 017087E2 		.loc 1 33 0
+ 224              		and	r6, r3, #255
+ 225 0178 FF6003E2 		.loc 1 34 0
+ 226              		orrne	r6, r6, #1
+ 227 017c 01608613 		.loc 1 25 0
+ 228              		cmp	r7, #8
+ 229 0180 080057E3 		bne	.L21
+ 230 0184 EFFFFF1A 	.LBE3:
+ 231              		.loc 1 38 0
+ 232              		str	r5, [r4, #12]
+ 233 0188 0C5084E5 		.loc 1 40 0
+ 234              		ldr	r3, [r4, #8]
+ 235 018c 083094E5 		orr	r3, r3, #8
+ 236 0190 083083E3 		str	r3, [r4, #8]
+ 237 0194 083084E5 		.loc 1 44 0
+ 238              		mov	r0, #1
+ 239 0198 0100A0E3 		.loc 1 41 0
+ 240              		str	r7, [r4, #12]
+ 241 019c 0C7084E5 		.loc 1 43 0
+ 242              		str	r5, [r4, #4]
+ 243 01a0 045084E5 		.loc 1 44 0
+ 244              		bl	delay_ms
+ 245 01a4 FEFFFFEB 		.loc 1 46 0
+ 246              		mov	r0, #1
+ 247 01a8 0100A0E3 		.loc 1 45 0
+ 248              		str	r5, [r4, #12]
+ 249 01ac 0C5084E5 		.loc 1 46 0
+ 250              		bl	delay_ms
+ 251 01b0 FEFFFFEB 		.loc 1 49 0
+ 252              		mov	r0, r6
+ 253 01b4 0600A0E1 		ldmfd	sp!, {r4, r5, r6, r7, lr}
+ 254 01b8 F040BDE8 		bx	lr
+ 255 01bc 1EFF2FE1 	.L29:
+ 256              		.align	2
+ 257              	.L28:
+ 258              		.word	-536707072
+ 259 01c0 008002E0 	.LFE2:
+ 261              		.global	__udivsi3
+ 262              		.align	2
+ 263              		.global	sht15_read
+ 265              	sht15_read:
+ 266              	.LFB4:
+ 267              		.loc 1 88 0
+ 268              		@ Function supports interworking.
+ 269              		@ args = 0, pretend = 0, frame = 0
+ 270              		@ frame_needed = 0, uses_anonymous_args = 0
+ 271              	.LVL6:
+ 272              		stmfd	sp!, {r4, r5, r6, lr}
+ 273 01c4 70402DE9 	.LCFI3:
+ 274              		.loc 1 88 0
+ 275              		mov	r5, r0
+ 276 01c8 0050A0E1 		mov	r6, r1
+ 277 01cc 0160A0E1 		.loc 1 93 0
+ 278              		bl	sht15_start
+ 279 01d0 FEFFFFEB 	.LVL7:
+ 280              		.loc 1 94 0
+ 281              		mov	r0, #3
+ 282 01d4 0300A0E3 		bl	sht15_send_byte
+ 283 01d8 FEFFFFEB 	.L31:
+ 284              		.loc 1 95 0
+ 285              		ldr	r3, .L40
+ 286 01dc B8309FE5 		ldr	r3, [r3, #0]
+ 287 01e0 003093E5 		tst	r3, #8
+ 288 01e4 080013E3 		bne	.L31
+ 289 01e8 FBFFFF1A 		.loc 1 96 0
+ 290              		bl	sht15_read_byte
+ 291 01ec FEFFFFEB 		.loc 1 97 0
+ 292              		mov	r4, r0, asl #8
+ 293 01f0 0044A0E1 	.LVL8:
+ 294              		.loc 1 98 0
+ 295              		bl	sht15_read_byte
+ 296 01f4 FEFFFFEB 		.loc 1 99 0
+ 297              		mov	r3, #18
+ 298 01f8 1230A0E3 		orr	r4, r4, r0
+ 299 01fc 004084E1 	.LVL9:
+ 300              		mul	r3, r4, r3
+ 301 0200 940303E0 		str	r3, [r5, #0]
+ 302 0204 003085E5 		.loc 1 101 0
+ 303              		bl	sht15_read_byte
+ 304 0208 FEFFFFEB 		.loc 1 104 0
+ 305              		ldr	r0, [r5, #0]
+ 306 020c 000095E5 		.loc 1 105 0
+ 307              		sub	r0, r0, #39168
+ 308 0210 990C40E2 		mov	r1, #10
+ 309 0214 0A10A0E3 		sub	r0, r0, #132
+ 310 0218 840040E2 		bl	__udivsi3
+ 311 021c FEFFFFEB 		str	r0, [r5, #0]
+ 312 0220 000085E5 		.loc 1 110 0
+ 313              		bl	sht15_start
+ 314 0224 FEFFFFEB 		.loc 1 111 0
+ 315              		mov	r0, #5
+ 316 0228 0500A0E3 		bl	sht15_send_byte
+ 317 022c FEFFFFEB 	.L33:
+ 318              		.loc 1 114 0
+ 319              		ldr	r3, .L40
+ 320 0230 64309FE5 		ldr	r3, [r3, #0]
+ 321 0234 003093E5 		tst	r3, #8
+ 322 0238 080013E3 		bne	.L33
+ 323 023c FBFFFF1A 		.loc 1 116 0
+ 324              		bl	sht15_read_byte
+ 325 0240 FEFFFFEB 		.loc 1 117 0
+ 326              		mov	r4, r0, asl #8
+ 327 0244 0044A0E1 	.LVL10:
+ 328              		.loc 1 118 0
+ 329              		bl	sht15_read_byte
+ 330 0248 FEFFFFEB 		.loc 1 119 0
+ 331              		orr	r4, r4, r0
+ 332 024c 004084E1 	.LVL11:
+ 333              		str	r4, [r6, #0]
+ 334 0250 004086E5 		.loc 1 122 0
+ 335              		bl	sht15_read_byte
+ 336 0254 FEFFFFEB 		.loc 1 125 0
+ 337              		ldr	r2, [r6, #0]
+ 338 0258 002096E5 		mov	r3, #28
+ 339 025c 1C30A0E3 		mul	r1, r2, r3
+ 340 0260 920301E0 	.LVL12:
+ 341              		.loc 1 132 0
+ 342              		ldr	r3, .L40+4
+ 343 0264 34309FE5 		.loc 1 126 0
+ 344              		mul	r5, r1, r2
+ 345 0268 910205E0 	.LVL13:
+ 346              		.loc 1 132 0
+ 347              		mul	r0, r2, r3
+ 348 026c 920300E0 		mov	r1, #100
+ 349 0270 6410A0E3 	.LVL14:
+ 350              		bl	__udivsi3
+ 351 0274 FEFFFFEB 		ldr	r1, .L40+8
+ 352 0278 24109FE5 		mov	r4, r0
+ 353 027c 0040A0E1 		mov	r0, r5
+ 354 0280 0500A0E1 		bl	__udivsi3
+ 355 0284 FEFFFFEB 		rsb	r4, r0, r4
+ 356 0288 044060E0 		sub	r4, r4, #400
+ 357 028c 194E44E2 		str	r4, [r6, #0]
+ 358 0290 004086E5 		.loc 1 137 0
+ 359              		ldmfd	sp!, {r4, r5, r6, lr}
+ 360 0294 7040BDE8 		bx	lr
+ 361 0298 1EFF2FE1 	.L41:
+ 362              		.align	2
+ 363              	.L40:
+ 364              		.word	-536707072
+ 365 029c 008002E0 		.word	405
+ 366 02a0 95010000 		.word	100000
+ 367 02a4 A0860100 	.LFE4:
+ 369              		.section	.debug_frame,"",%progbits
+ 470              		.section	.debug_loc,"",%progbits
+DEFINED SYMBOLS
+                            *ABS*:00000000 SHT15.c
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/cc0ubaaa.s:13     .text:00000000 sht15_start
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/cc0ubaaa.s:20     .text:00000000 $a
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/cc0ubaaa.s:77     .text:00000070 $d
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/cc0ubaaa.s:83     .text:00000074 sht15_send_byte
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/cc0ubaaa.s:91     .text:00000074 $a
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/cc0ubaaa.s:172    .text:00000120 $d
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/cc0ubaaa.s:178    .text:00000124 sht15_read_byte
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/cc0ubaaa.s:185    .text:00000124 $a
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/cc0ubaaa.s:259    .text:000001c0 $d
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/cc0ubaaa.s:266    .text:000001c4 sht15_read
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/cc0ubaaa.s:273    .text:000001c4 $a
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/cc0ubaaa.s:365    .text:0000029c $d
+
+UNDEFINED SYMBOLS
+delay_ms
+__udivsi3

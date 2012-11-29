@@ -1,0 +1,581 @@
+   1              		.file	"gps.c"
+   9              	.Ltext0:
+  10              		.section	.rodata.str1.4,"aMS",%progbits,1
+  11              		.align	2
+  12              	.LC0:
+  13 0000 50535246 		.ascii	"PSRF151,%d\000"
+  13      3135312C 
+  13      256400
+  14              		.text
+  15              		.align	2
+  16              		.global	configure_gps_waas
+  18              	configure_gps_waas:
+  19              	.LFB4:
+  20              		.file 1 "../Library/gps.c"
+   1:../Library/gps.c **** /******************************************************************************/
+   2:../Library/gps.c **** /*  			Copyright Spark Fun Electronics                               */
+   3:../Library/gps.c **** /******************************************************************************/
+   4:../Library/gps.c **** /*                                                                            */
+   5:../Library/gps.c **** /*                                                                            */
+   6:../Library/gps.c **** /*  3-20-05: Removed Lat/Lon averaging to fix "warmup" bug.                   */
+   7:../Library/gps.c **** /*                                                                            */
+   8:../Library/gps.c **** /******************************************************************************/
+   9:../Library/gps.c **** 
+  10:../Library/gps.c **** //*******************************************************
+  11:../Library/gps.c **** //					Libraries
+  12:../Library/gps.c **** //*******************************************************
+  13:../Library/gps.c **** #include "gps.h"
+  14:../Library/gps.c **** #include <stdio.h>
+  15:../Library/gps.c **** #include "serial.h"
+  16:../Library/gps.c **** #include "rprintf.h"
+  17:../Library/gps.c **** 
+  18:../Library/gps.c **** //Needed for uint8_t
+  19:../Library/gps.c **** #include <stdint.h>
+  20:../Library/gps.c **** 
+  21:../Library/gps.c **** #include <stdlib.h>
+  22:../Library/gps.c **** #include <string.h>
+  23:../Library/gps.c **** 
+  24:../Library/gps.c **** 
+  25:../Library/gps.c **** //*******************************************************
+  26:../Library/gps.c **** //					Global Variables for gps.c
+  27:../Library/gps.c **** //*******************************************************
+  28:../Library/gps.c **** const char gps_init_string408[]="$PSRF103,01,00,00,01*25\r\n"	//Turn off GLL messages
+  29:../Library/gps.c **** "$PSRF103,02,00,00,01*26\r\n"	//Turn off GSA messages
+  30:../Library/gps.c **** "$PSRF103,03,00,00,01*27\r\n"	//Turn off GSV messages
+  31:../Library/gps.c **** "$PSRF103,04,00,00,01*20\r\n"	//Turn off RMC messages
+  32:../Library/gps.c **** "$PSRF103,05,00,00,01*21\r\n"	//Turn off VTG messages
+  33:../Library/gps.c **** "$PSRF103,06,00,00,01*22\r\n"	//Turn off ??? messages
+  34:../Library/gps.c **** "$PSRF103,07,00,00,01*23\r\n"	//Turn off ??? messages
+  35:../Library/gps.c **** "$PSRF103,00,00,00,01*24\r\n"	//Turn off GGA messages
+  36:../Library/gps.c **** //"$PSRF103,00,00,01,00*24\r\n";	//Set GGA messages to 1 Hz rate with checksum disabled!
+  37:../Library/gps.c **** //"$PSRF103,04,00,01,01*21\r\n";	//Set RMC messages to 1 Hz rate with checksum enabled
+  38:../Library/gps.c **** "$PSRF103,04,00,01,00*20\r\n";	//Set RMC messages to 1 Hz rate with checksum enabled
+  39:../Library/gps.c **** 
+  40:../Library/gps.c **** int locks = 0;
+  41:../Library/gps.c **** 
+  42:../Library/gps.c **** //*******************************************************
+  43:../Library/gps.c **** //					GPS Functions
+  44:../Library/gps.c **** //*******************************************************
+  45:../Library/gps.c **** //Usage: GPS_init_strings();
+  46:../Library/gps.c **** //Inputs: None
+  47:../Library/gps.c **** //Outputs: None
+  48:../Library/gps.c **** //Description: This function will initialize the GPS module
+  49:../Library/gps.c **** //				with the strings defined in the gps_init_string
+  50:../Library/gps.c **** //				array defined in the Global Varibales section.
+  51:../Library/gps.c **** void GPS_init_strings(void)
+  52:../Library/gps.c **** {
+  53:../Library/gps.c ****     for(int i=0; gps_init_string408[i] != '\0'; i++)
+  54:../Library/gps.c ****     {
+  55:../Library/gps.c ****         putc_serial1(gps_init_string408[i]);
+  56:../Library/gps.c ****     }
+  57:../Library/gps.c **** }
+  58:../Library/gps.c **** 
+  59:../Library/gps.c **** //Configure the GPS message with the specified frequency
+  60:../Library/gps.c **** //By default checksum is disabled
+  61:../Library/gps.c **** 
+  62:../Library/gps.c **** void config_gps_msgs(unsigned char const type, unsigned char const freq) {
+  63:../Library/gps.c **** 	char gps_init_string[20];
+  64:../Library/gps.c **** 	unsigned char cksum;
+  65:../Library/gps.c **** 	
+  66:../Library/gps.c **** 	sprintf( gps_init_string, "PSRF103,%d,00,%d,01", type, freq );
+  67:../Library/gps.c **** 	GPS_CHECKSUM(gps_init_string,cksum) 
+  68:../Library/gps.c **** 
+  69:../Library/gps.c **** 	putc_serial1('$');
+  70:../Library/gps.c **** 	for(int i=0; gps_init_string[i] != '\0'; i++)
+  71:../Library/gps.c **** 	{
+  72:../Library/gps.c **** 		putc_serial1(gps_init_string[i]);
+  73:../Library/gps.c **** 	}
+  74:../Library/gps.c **** 	putc_serial1('*');
+  75:../Library/gps.c **** 	putc_serial1(((cksum&0xF0)>>4)+'0');
+  76:../Library/gps.c **** 	putc_serial1((cksum&0x0F)+'0');
+  77:../Library/gps.c **** 	putc_serial1('\r');
+  78:../Library/gps.c **** 	putc_serial1('\n');
+  79:../Library/gps.c **** 
+  80:../Library/gps.c **** }
+  81:../Library/gps.c **** 
+  82:../Library/gps.c **** void configure_gps_waas(unsigned char const enable){
+  21              	tion supports interworking.
+  22              		@ args = 0, pretend = 0, frame = 20
+  23              		@ frame_needed = 0, uses_anonymous_args = 0
+  24              	.LVL0:
+  25              		stmfd	sp!, {r4, r5, lr}
+  26 0000 30402DE9 	.LCFI0:
+  27              		sub	sp, sp, #20
+  28 0004 14D04DE2 	.LCFI1:
+  29              		.loc 1 82 0
+  30              		and	r2, r0, #255
+  31 0008 FF2000E2 		.loc 1 86 0
+  83:../Library/gps.c **** enable );
+  84:../Library/gps.c **** 	GPS_CHECKSUM(gps_string,cksum) 
+  85:../Library/gps.c **** 
+  86:../Library/gps.c **** 	putc_serial1('$');
+  32              	9
+  33 000c 8C109FE5 		mov	r0, sp
+  34 0010 0D00A0E1 	.LVL1:
+  35              		bl	sprintf
+  36 0014 FEFFFFEB 	.LVL2:
+  37              	.LBB2:
+  38              		.loc 1 87 0
+  87:../Library/gps.c **** _CHECKSUM(gps_string,cksum) 
+  39              	, sp
+  40 0018 0D00A0E1 		bl	strlen
+  41 001c FEFFFFEB 		mov	r5, #0
+  42 0020 0050A0E3 	.LVL3:
+  43              		mov	r2, r5
+  44 0024 0520A0E1 	.LVL4:
+  45              		b	.L2
+  46 0028 020000EA 	.L3:
+  47              		ldrb	r3, [r2, sp]	@ zero_extendqisi2
+  48 002c 0D30D2E7 		add	r2, r2, #1
+  49 0030 012082E2 		eor	r5, r5, r3
+  50 0034 035025E0 	.L2:
+  51              		cmp	r2, r0
+  52 0038 000052E1 		bne	.L3
+  53 003c FAFFFF1A 	.LBE2:
+  54              		.loc 1 89 0
+  88:../Library/gps.c **** 151,%d", enable );
+  89:../Library/gps.c **** 	GPS_CHECKSUM(gps_string,cksum) 
+  55              		putc_serial1
+  56 0040 2400A0E3 	.LVL5:
+  57 0044 FEFFFFEB 		mov	r4, #0
+  58              	.LVL6:
+  59 0048 0040A0E3 		b	.L5
+  60              	.L6:
+  61 004c 000000EA 	.LBB3:
+  62              		.loc 1 92 0
+  63              		bl	putc_serial1
+  90:../Library/gps.c **** 151,%d", enable );
+  91:../Library/gps.c **** 	GPS_CHECKSUM(gps_string,cksum) 
+  92:../Library/gps.c **** 
+  64              	c 1 90 0
+  65 0050 FEFFFFEB 		ldrb	r3, [r4, sp]	@ zero_extendqisi2
+  66              		subs	r0, r3, #0
+  67              		add	r4, r4, #1
+  68 0054 0D30D4E7 		bne	.L6
+  69 0058 000053E2 	.LBE3:
+  70 005c 014084E2 		.loc 1 94 0
+  71 0060 FAFFFF1A 		mov	r0, #42
+  72              		bl	putc_serial1
+  93:../Library/gps.c **** 1,%d", enable );
+  94:../Library/gps.c **** 	GPS_CHECKSUM(gps_string,cksum) 
+  73              	5 0
+  74 0064 2A00A0E3 		mov	r0, r5, lsr #4
+  75 0068 FEFFFFEB 		add	r0, r0, #48
+  95:../Library/gps.c **** 151,%d", enable );
+  76              		putc_serial1
+  77 006c 2502A0E1 		.loc 1 96 0
+  78 0070 300080E2 		and	r0, r5, #15
+  79 0074 FEFFFFEB 		add	r0, r0, #48
+  96:../Library/gps.c **** sum;
+  80              	putc_serial1
+  81 0078 0F0005E2 		.loc 1 97 0
+  82 007c 300080E2 		mov	r0, #13
+  83 0080 FEFFFFEB 		bl	putc_serial1
+  97:../Library/gps.c **** t enable){
+  84              	c 1 98 0
+  85 0084 0D00A0E3 		mov	r0, #10
+  86 0088 FEFFFFEB 		bl	putc_serial1
+  98:../Library/gps.c **** 
+  87              	oc 1 99 0
+  88 008c 0A00A0E3 		add	sp, sp, #20
+  89 0090 FEFFFFEB 		ldmfd	sp!, {r4, r5, lr}
+  99:../Library/gps.c **** ksum&0x0F)+'0');
+  90              		lr
+  91 0094 14D08DE2 	.L10:
+  92 0098 3040BDE8 		.align	2
+  93 009c 1EFF2FE1 	.L9:
+  94              		.word	.LC0
+  95              	.LFE4:
+  97 00a0 00000000 		.align	2
+  98              		.global	disable_waas
+ 100              	disable_waas:
+ 101              	.LFB11:
+ 102              		.loc 1 137 0
+ 103              		@ Function supports interworking.
+ 104              		@ args = 0, pretend = 0, frame = 0
+ 100:../Library/gps.c **** rial1(((cksum&0xF0)>>4)+'0');
+ 101:../Library/gps.c **** 	putc_serial1((cksum&0x0F)+'0');
+ 102:../Library/gps.c **** 	putc_serial1('\r');
+ 103:../Library/gps.c **** 	putc_serial1('\n');
+ 104:../Library/gps.c **** 
+ 105:../Library/gps.c **** }
+ 106:../Library/gps.c **** 
+ 107:../Library/gps.c **** void configure_gps_waas(unsigned char const enable){
+ 108:../Library/gps.c **** 	char gps_string[20];
+ 109:../Library/gps.c **** 	unsigned char cksum;
+ 110:../Library/gps.c **** 	
+ 111:../Library/gps.c **** 	sprintf( gps_string, "PSRF151,%d", enable );
+ 112:../Library/gps.c **** 	GPS_CHECKSUM(gps_string,cksum) 
+ 113:../Library/gps.c **** 
+ 114:../Library/gps.c **** 	putc_serial1('$');
+ 115:../Library/gps.c **** 	for(int i=0; gps_string[i] != '\0'; i++)
+ 116:../Library/gps.c **** 	{
+ 117:../Library/gps.c **** 		putc_serial1(gps_string[i]);
+ 118:../Library/gps.c **** 	}
+ 119:../Library/gps.c **** 	putc_serial1('*');
+ 120:../Library/gps.c **** 	putc_serial1(((cksum&0xF0)>>4)+'0');
+ 121:../Library/gps.c **** 	putc_serial1((cksum&0x0F)+'0');
+ 122:../Library/gps.c **** 	putc_serial1('\r');
+ 123:../Library/gps.c **** 	putc_serial1('\n');
+ 124:../Library/gps.c **** }
+ 125:../Library/gps.c **** 
+ 126:../Library/gps.c **** 
+ 127:../Library/gps.c **** //Disable all possibile GPS messages that could be generated by the
+ 128:../Library/gps.c **** //receiver.
+ 129:../Library/gps.c **** void disable_all_gps_msgs(void) {
+ 130:../Library/gps.c ****     config_gps_msgs( 0, 0 ); //Turn off GGA messages
+ 131:../Library/gps.c ****     config_gps_msgs( 1, 0 ); //Turn off GLL messages
+ 132:../Library/gps.c ****     config_gps_msgs( 2, 0 ); //Turn off GSA messages
+ 133:../Library/gps.c ****     config_gps_msgs( 3, 0 ); //Turn off GSV messages
+ 134:../Library/gps.c ****     config_gps_msgs( 4, 0 ); //Turn off RMC messages
+ 135:../Library/gps.c ****     config_gps_msgs( 5, 0 ); //Turn off VTG messages
+ 136:../Library/gps.c ****     config_gps_msgs( 6, 0 ); //Turn off MSS messages
+ 137:../Library/gps.c ****     config_gps_msgs( 7, 0 ); //Turn off messages #7 --currently not defined--
+ 105              	 = 0, uses_anonymous_args = 0
+ 106              		@ link register save eliminated.
+ 107              		.loc 1 138 0
+ 108              		mov	r0, #0
+ 109              		.loc 1 137 0
+ 138:../Library/gps.c ****  --currently not defined--
+ 110              	 needed for prologue
+ 111 00a4 0000A0E3 		.loc 1 139 0
+ 112              		.loc 1 138 0
+ 113              		b	configure_gps_waas
+ 139:../Library/gps.c ****  --currently not defined--
+ 114              	11:
+ 116 00a8 FEFFFFEA 		.align	2
+ 117              		.global	enable_waas
+ 119              	enable_waas:
+ 120              	.LFB10:
+ 121              		.loc 1 133 0
+ 122              		@ Function supports interworking.
+ 123              		@ args = 0, pretend = 0, frame = 0
+ 124              		@ frame_needed = 0, uses_anonymous_args = 0
+ 125              		@ link register save eliminated.
+ 126              		.loc 1 134 0
+ 127              		mov	r0, #1
+ 128              		.loc 1 133 0
+ 129              		@ lr needed for prologue
+ 130 00ac 0100A0E3 		.loc 1 135 0
+ 131              		.loc 1 134 0
+ 132              		b	configure_gps_waas
+ 133              	.LFE10:
+ 135 00b0 FEFFFFEA 		.section	.rodata.str1.4
+ 136              		.align	2
+ 137              	.LC1:
+ 138              		.ascii	"PSRF103,%d,00,%d,01\000"
+ 139 000b 00       		.text
+ 140              		.align	2
+ 141 000c 50535246 		.global	config_gps_msgs
+ 141      3130332C 
+ 141      25642C30 
+ 141      302C2564 
+ 141      2C303100 
+ 143              	config_gps_msgs:
+ 144              	.LFB3:
+ 145              		.loc 1 62 0
+ 146              		@ Function supports interworking.
+ 147              		@ args = 0, pretend = 0, frame = 20
+ 148              		@ frame_needed = 0, uses_anonymous_args = 0
+ 149              	.LVL7:
+ 150              		stmfd	sp!, {r4, r5, lr}
+ 151              	.LCFI2:
+ 152              		sub	sp, sp, #20
+ 153 00b4 30402DE9 	.LCFI3:
+ 154              		.loc 1 62 0
+ 155 00b8 14D04DE2 		and	r2, r0, #255
+ 156              		and	r3, r1, #255
+ 157              		.loc 1 66 0
+ 158 00bc FF2000E2 		mov	r0, sp
+ 159 00c0 FF3001E2 	.LVL8:
+ 160              		ldr	r1, .L23
+ 161 00c4 0D00A0E1 	.LVL9:
+ 162              		bl	sprintf
+ 163 00c8 88109FE5 	.LVL10:
+ 164              	.LBB4:
+ 165 00cc FEFFFFEB 		.loc 1 67 0
+ 166              		mov	r0, sp
+ 167              		bl	strlen
+ 168              		mov	r5, #0
+ 169 00d0 0D00A0E1 	.LVL11:
+ 170 00d4 FEFFFFEB 		mov	r2, r5
+ 171 00d8 0050A0E3 	.LVL12:
+ 172              		b	.L16
+ 173 00dc 0520A0E1 	.L17:
+ 174              		ldrb	r3, [r2, sp]	@ zero_extendqisi2
+ 175 00e0 020000EA 		add	r2, r2, #1
+ 176              		eor	r5, r5, r3
+ 177 00e4 0D30D2E7 	.L16:
+ 178 00e8 012082E2 		cmp	r2, r0
+ 179 00ec 035025E0 		bne	.L17
+ 180              	.LBE4:
+ 181 00f0 000052E1 		.loc 1 69 0
+ 182 00f4 FAFFFF1A 		mov	r0, #36
+ 183              		bl	putc_serial1
+ 184              	.LVL13:
+ 185 00f8 2400A0E3 		mov	r4, #0
+ 186 00fc FEFFFFEB 	.LVL14:
+ 187              		b	.L19
+ 188 0100 0040A0E3 	.L20:
+ 189              	.LBB5:
+ 190 0104 000000EA 		.loc 1 72 0
+ 191              		bl	putc_serial1
+ 192              	.L19:
+ 193              		.loc 1 70 0
+ 194 0108 FEFFFFEB 		ldrb	r3, [r4, sp]	@ zero_extendqisi2
+ 195              		subs	r0, r3, #0
+ 196              		add	r4, r4, #1
+ 197 010c 0D30D4E7 		bne	.L20
+ 198 0110 000053E2 	.LBE5:
+ 199 0114 014084E2 		.loc 1 74 0
+ 200 0118 FAFFFF1A 		mov	r0, #42
+ 201              		bl	putc_serial1
+ 202              		.loc 1 75 0
+ 203 011c 2A00A0E3 		mov	r0, r5, lsr #4
+ 204 0120 FEFFFFEB 		add	r0, r0, #48
+ 205              		bl	putc_serial1
+ 206 0124 2502A0E1 		.loc 1 76 0
+ 207 0128 300080E2 		and	r0, r5, #15
+ 208 012c FEFFFFEB 		add	r0, r0, #48
+ 209              		bl	putc_serial1
+ 210 0130 0F0005E2 		.loc 1 77 0
+ 211 0134 300080E2 		mov	r0, #13
+ 212 0138 FEFFFFEB 		bl	putc_serial1
+ 213              		.loc 1 78 0
+ 214 013c 0D00A0E3 		mov	r0, #10
+ 215 0140 FEFFFFEB 		bl	putc_serial1
+ 216              		.loc 1 80 0
+ 217 0144 0A00A0E3 		add	sp, sp, #20
+ 218 0148 FEFFFFEB 		ldmfd	sp!, {r4, r5, lr}
+ 219              		bx	lr
+ 220 014c 14D08DE2 	.L24:
+ 221 0150 3040BDE8 		.align	2
+ 222 0154 1EFF2FE1 	.L23:
+ 223              		.word	.LC1
+ 224              	.LFE3:
+ 226 0158 0C000000 		.align	2
+ 227              		.global	disable_gps_gga_msgs
+ 229              	disable_gps_gga_msgs:
+ 230              	.LFB9:
+ 231              		.loc 1 129 0
+ 232              		@ Function supports interworking.
+ 233              		@ args = 0, pretend = 0, frame = 0
+ 234              		@ frame_needed = 0, uses_anonymous_args = 0
+ 235              		@ link register save eliminated.
+ 236              		.loc 1 130 0
+ 237              		mov	r0, #0
+ 238              		mov	r1, r0
+ 239              		.loc 1 129 0
+ 240 015c 0000A0E3 		@ lr needed for prologue
+ 241 0160 0010A0E1 		.loc 1 131 0
+ 242              		.loc 1 130 0
+ 243              		b	config_gps_msgs
+ 244              	.LFE9:
+ 246 0164 FEFFFFEA 		.align	2
+ 247              		.global	enable_gps_gga_msgs
+ 249              	enable_gps_gga_msgs:
+ 250              	.LFB8:
+ 251              		.loc 1 125 0
+ 252              		@ Function supports interworking.
+ 253              		@ args = 0, pretend = 0, frame = 0
+ 254              		@ frame_needed = 0, uses_anonymous_args = 0
+ 255              		@ link register save eliminated.
+ 256              	.LVL15:
+ 257              		and	r1, r0, #255
+ 258              		.loc 1 126 0
+ 259              		mov	r0, #0
+ 260 0168 FF1000E2 	.LVL16:
+ 261              		.loc 1 125 0
+ 262 016c 0000A0E3 		@ lr needed for prologue
+ 263              		.loc 1 127 0
+ 264              		.loc 1 126 0
+ 265              		b	config_gps_msgs
+ 266              	.LVL17:
+ 267              	.LFE8:
+ 269              		.align	2
+ 270              		.global	disable_gps_rmc_msgs
+ 272              	disable_gps_rmc_msgs:
+ 273              	.LFB7:
+ 274              		.loc 1 121 0
+ 275              		@ Function supports interworking.
+ 276              		@ args = 0, pretend = 0, frame = 0
+ 277              		@ frame_needed = 0, uses_anonymous_args = 0
+ 278              		@ link register save eliminated.
+ 279              		.loc 1 122 0
+ 280              		mov	r0, #4
+ 281              		mov	r1, #0
+ 282              		.loc 1 121 0
+ 283 0174 0400A0E3 		@ lr needed for prologue
+ 284 0178 0010A0E3 		.loc 1 123 0
+ 285              		.loc 1 122 0
+ 286              		b	config_gps_msgs
+ 287              	.LFE7:
+ 289 017c FEFFFFEA 		.align	2
+ 290              		.global	enable_gps_rmc_msgs
+ 292              	enable_gps_rmc_msgs:
+ 293              	.LFB6:
+ 294              		.loc 1 117 0
+ 295              		@ Function supports interworking.
+ 296              		@ args = 0, pretend = 0, frame = 0
+ 297              		@ frame_needed = 0, uses_anonymous_args = 0
+ 298              		@ link register save eliminated.
+ 299              	.LVL18:
+ 300              		and	r1, r0, #255
+ 301              		.loc 1 118 0
+ 302              		mov	r0, #4
+ 303 0180 FF1000E2 	.LVL19:
+ 304              		.loc 1 117 0
+ 305 0184 0400A0E3 		@ lr needed for prologue
+ 306              		.loc 1 119 0
+ 307              		.loc 1 118 0
+ 308              		b	config_gps_msgs
+ 309              	.LVL20:
+ 310              	.LFE6:
+ 312              		.align	2
+ 313              		.global	disable_all_gps_msgs
+ 315              	disable_all_gps_msgs:
+ 316              	.LFB5:
+ 317              		.loc 1 104 0
+ 318              		@ Function supports interworking.
+ 319              		@ args = 0, pretend = 0, frame = 0
+ 320              		@ frame_needed = 0, uses_anonymous_args = 0
+ 321              		.loc 1 105 0
+ 322              		mov	r0, #0
+ 323              		.loc 1 104 0
+ 324              		str	lr, [sp, #-4]!
+ 325 018c 0000A0E3 	.LCFI4:
+ 326              		.loc 1 105 0
+ 327 0190 04E02DE5 		mov	r1, r0
+ 328              		bl	config_gps_msgs
+ 329              		.loc 1 106 0
+ 330 0194 0010A0E1 		mov	r0, #1
+ 331 0198 FEFFFFEB 		mov	r1, #0
+ 332              		bl	config_gps_msgs
+ 333 019c 0100A0E3 		.loc 1 107 0
+ 334 01a0 0010A0E3 		mov	r0, #2
+ 335 01a4 FEFFFFEB 		mov	r1, #0
+ 336              		bl	config_gps_msgs
+ 337 01a8 0200A0E3 		.loc 1 108 0
+ 338 01ac 0010A0E3 		mov	r0, #3
+ 339 01b0 FEFFFFEB 		mov	r1, #0
+ 340              		bl	config_gps_msgs
+ 341 01b4 0300A0E3 		.loc 1 109 0
+ 342 01b8 0010A0E3 		mov	r0, #4
+ 343 01bc FEFFFFEB 		mov	r1, #0
+ 344              		bl	config_gps_msgs
+ 345 01c0 0400A0E3 		.loc 1 110 0
+ 346 01c4 0010A0E3 		mov	r0, #5
+ 347 01c8 FEFFFFEB 		mov	r1, #0
+ 348              		bl	config_gps_msgs
+ 349 01cc 0500A0E3 		.loc 1 111 0
+ 350 01d0 0010A0E3 		mov	r0, #6
+ 351 01d4 FEFFFFEB 		mov	r1, #0
+ 352              		bl	config_gps_msgs
+ 353 01d8 0600A0E3 		.loc 1 112 0
+ 354 01dc 0010A0E3 		mov	r0, #7
+ 355 01e0 FEFFFFEB 		mov	r1, #0
+ 356              		.loc 1 114 0
+ 357 01e4 0700A0E3 		ldr	lr, [sp], #4
+ 358 01e8 0010A0E3 		.loc 1 112 0
+ 359              		b	config_gps_msgs
+ 360 01ec 04E09DE4 	.LFE5:
+ 362 01f0 FEFFFFEA 		.align	2
+ 363              		.global	GPS_init_strings
+ 365              	GPS_init_strings:
+ 366              	.LFB2:
+ 367              		.loc 1 52 0
+ 368              		@ Function supports interworking.
+ 369              		@ args = 0, pretend = 0, frame = 0
+ 370              		@ frame_needed = 0, uses_anonymous_args = 0
+ 371              		stmfd	sp!, {r4, lr}
+ 372              	.LCFI5:
+ 373              		.loc 1 52 0
+ 374 01f4 10402DE9 		ldr	r4, .L40
+ 375              		b	.L36
+ 376              	.L37:
+ 377 01f8 18409FE5 	.LBB6:
+ 378 01fc 000000EA 		.loc 1 55 0
+ 379              		bl	putc_serial1
+ 380              	.L36:
+ 381              		.loc 1 53 0
+ 382 0200 FEFFFFEB 		ldrb	r3, [r4], #1	@ zero_extendqisi2
+ 383              		subs	r0, r3, #0
+ 384              		bne	.L37
+ 385 0204 0130D4E4 	.LBE6:
+ 386 0208 000053E2 		.loc 1 57 0
+ 387 020c FBFFFF1A 		ldmfd	sp!, {r4, lr}
+ 388              		bx	lr
+ 389              	.L41:
+ 390 0210 1040BDE8 		.align	2
+ 391 0214 1EFF2FE1 	.L40:
+ 392              		.word	gps_init_string408
+ 393              	.LFE2:
+ 395 0218 00000000 		.global	gps_init_string408
+ 396              		.section	.rodata
+ 397              		.align	2
+ 400              	gps_init_string408:
+ 401              		.ascii	"$PSRF103,01,00,00,01*25\015\012$PSRF103,02,00,00,01"
+ 402              		.ascii	"*26\015\012$PSRF103,03,00,00,01*27\015\012$PSRF103,"
+ 403              		.ascii	"04,00,00,01*20\015\012$PSRF103,05,00,00,01*21\015\012"
+ 404 0000 24505352 		.ascii	"$PSRF103,06,00,00,01*22\015\012$PSRF103,07,00,00,01"
+ 404      46313033 
+ 404      2C30312C 
+ 404      30302C30 
+ 404      302C3031 
+ 405 002d 2A32360D 		.ascii	"*23\015\012$PSRF103,00,00,00,01*24\015\012$PSRF103,"
+ 405      0A245053 
+ 405      52463130 
+ 405      332C3033 
+ 405      2C30302C 
+ 406 0054 30342C30 		.ascii	"04,00,01,00*20\015\012\000"
+ 406      302C3030 
+ 406      2C30312A 
+ 406      32300D0A 
+ 406      24505352 
+ 407 007d 24505352 		.global	locks
+ 407      46313033 
+ 407      2C30362C 
+ 407      30302C30 
+ 407      302C3031 
+ 408 00aa 2A32330D 		.bss
+ 408      0A245053 
+ 408      52463130 
+ 408      332C3030 
+ 408      2C30302C 
+ 409 00d1 30342C30 		.align	2
+ 409      302C3031 
+ 409      2C30302A 
+ 409      32300D0A 
+ 409      00
+ 412              	locks:
+ 413              		.space	4
+ 414              		.section	.debug_frame,"",%progbits
+ 415              	.Lframe0:
+ 416 0000 00000000 		.4byte	.LECIE0-.LSCIE0
+ 555              	.LLST0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 gps.c
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:18     .text:00000000 configure_gps_waas
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:26     .text:00000000 $a
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:97     .text:000000a0 $d
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:103    .text:000000a4 disable_waas
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:111    .text:000000a4 $a
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:122    .text:000000ac enable_waas
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:146    .text:000000b4 config_gps_msgs
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:226    .text:00000158 $d
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:232    .text:0000015c disable_gps_gga_msgs
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:240    .text:0000015c $a
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:252    .text:00000168 enable_gps_gga_msgs
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:275    .text:00000174 disable_gps_rmc_msgs
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:295    .text:00000180 enable_gps_rmc_msgs
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:318    .text:0000018c disable_all_gps_msgs
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:368    .text:000001f4 GPS_init_strings
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:395    .text:00000218 $d
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:403    .rodata:00000000 gps_init_string408
+C:\DOCUME~1\Ryan\LOCALS~1\Temp/ccwvbaaa.s:415    .bss:00000000 locks
+                             .bss:00000000 $d
+
+UNDEFINED SYMBOLS
+sprintf
+strlen
+putc_serial1

@@ -1,0 +1,1998 @@
+Archive member included because of file (symbol)
+
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o)
+                              ../Library/fat16.o (free)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o) (_malloc_r)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memcpy.o)
+                              ../Library/sd_raw.o (memcpy)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memset.o)
+                              ../Library/sd_raw.o (memset)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mlock.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o) (__malloc_lock)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(sprintf.o)
+                              main_v20.o (sprintf)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strchr.o)
+                              ../Library/fat16.o (strchr)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcmp.o)
+                              ../Library/fat16.o (strcmp)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcpy.o)
+                              main_v20.o (strcpy)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strlen.o)
+                              main_v20.o (strlen)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncmp.o)
+                              ../Library/fat16.o (strncmp)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncpy.o)
+                              ../Library/fat16.o (strncpy)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strrchr.o)
+                              ../Library/fat16.o (strrchr)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(sprintf.o) (_vfprintf_r)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcrtomb.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o) (_wcrtomb_r)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcsrtombs.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o) (_wcsrtombs_r)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wctomb_r.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcrtomb.o) (_wctomb_r)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wsetup.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o) (__swsetup)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o) (_dtoa_r)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fflush.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o) (fflush)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o) (__sinit)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o) (_free_r)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o) (__sfvwrite)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fwalk.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fflush.o) (_fwalk)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(impure.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o) (_impure_ptr)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o) (localeconv)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(makebuf.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wsetup.o) (__smakebuf)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memchr.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o) (memchr)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memmove.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o) (memmove)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o) (_Bfree)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(reallocr.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o) (_realloc_r)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isinf.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o) (isinf)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isnan.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o) (isnan)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o) (__sclose)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(callocr.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o) (_calloc_r)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o) (fclose)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+                              main_v20.o (__udivsi3)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+                              main_v20.o (__divsi3)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_umodsi3.o)
+                              main_v20.o (__umodsi3)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_modsi3.o)
+                              main_v20.o (__modsi3)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_dvmd_tls.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o) (__div0)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o) (__subdf3)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_muldivdf3.o)
+                              main_v20.o (__muldf3)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o) (__gtdf2)
+c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_fixdfsi.o)
+                              main_v20.o (__fixdfsi)
+
+Allocating common symbols
+Common symbol       size              file
+
+log_data_index      0x4               main_v20.o
+scp_temp            0x4               main_v20.o
+fs                  0x4               ../Library/rootdir.o
+sht_humidity        0x4               main_v20.o
+scp_pressure        0x4               main_v20.o
+read_sensors        0x1               main_v20.o
+battery_level       0x4               main_v20.o
+new_scp_data        0x1               main_v20.o
+dir_entry           0x2c              ../Library/rootdir.o
+power_register_values
+                    0x4               main_v20.o
+log_data            0x200             main_v20.o
+fd                  0x4               ../Library/rootdir.o
+acceleration_y      0x4               main_v20.o
+GPS                 0x48              main_v20.o
+file_name           0x20              main_v20.o
+partition           0x4               ../Library/rootdir.o
+new_sht_data        0x1               main_v20.o
+dd                  0x4               ../Library/rootdir.o
+NMEA_FILE           0x4               main_v20.o
+LOG_FILE            0x4               main_v20.o
+nmea_data           0x400             main_v20.o
+RTC_Set             0x1               main_v20.o
+acceleration_z      0x4               main_v20.o
+acceleration_x      0x4               main_v20.o
+new_sensor_data     0x1               main_v20.o
+sht_temp            0x4               main_v20.o
+gps_message         0x50              main_v20.o
+log_count           0x4               main_v20.o
+alarm_set           0x1               main_v20.o
+final_message       0x50              main_v20.o
+log_buffer          0xc8              main_v20.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ROM              0x00010000         0x0005f000         xr
+RAM              0x40000000         0x00008000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD Startup.o
+LOAD main_v20.o
+LOAD ../Library/syscalls.o
+LOAD ../Library/rprintf.o
+LOAD ../Library/serial.o
+LOAD ../Library/spi0.o
+LOAD ../Library/rootdir.o
+LOAD ../Library/sd_raw.o
+LOAD ../Library/fat16.o
+LOAD ../Library/partition.o
+LOAD ../Library/ADXL345.o
+LOAD ../Library/SCP1000.o
+LOAD ../Library/SHT15.o
+LOAD ../Library/gps.o
+LOAD ../Library/LPCUSB/main_msc.o
+LOAD ../Library/LPCUSB/msc_bot.o
+LOAD ../Library/LPCUSB/msc_scsi.o
+LOAD ../Library/LPCUSB/blockdev_sd.o
+LOAD ../Library/LPCUSB/lpc2000_spi.o
+LOAD ../Library/LPCUSB/usbinit.o
+LOAD ../Library/LPCUSB/usbhw_lpc.o
+LOAD ../Library/LPCUSB/usbcontrol.o
+LOAD ../Library/LPCUSB/usbstdreq.o
+LOAD c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a
+LOAD c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libm.a
+LOAD c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a
+LOAD c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a
+START GROUP
+LOAD c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a
+LOAD c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libg.a
+LOAD c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a
+END GROUP
+
+.text           0x00010000     0xe38c
+ *(.vectorg)
+ .vectorg       0x00010000       0x98 Startup.o
+                0x00010050                __IRQ_Wrapper
+                0x00010098                . = ALIGN (0x4)
+ *(.init)
+ .init          0x00010098       0xfc Startup.o
+                0x00010164                __exit_THUMB
+                0x00010098                __startup
+                0x00010160                __exit_ARM
+ *(.text .text.*)
+ .text          0x00010194        0x0 Startup.o
+ .text          0x00010194     0x15d0 main_v20.o
+                0x000103e8                parseRMC
+                0x00010bdc                bootUp
+                0x00010760                reverse
+                0x000106b8                reset
+                0x00010a50                goToSleep
+                0x00010668                get_adc_1
+                0x000107a4                itoa
+                0x00010290                parseGGA
+                0x00010968                wakeUp
+                0x00010de4                main
+                0x00010194                delay_ms
+                0x00010728                initializeGps
+                0x00010880                createLogFile
+                0x000107f4                saveData
+ .text          0x00011764       0x64 ../Library/syscalls.o
+                0x0001177c                _lseek_r
+                0x00011784                _fstat_r
+                0x00011794                isatty
+                0x0001179c                _sbrk_r
+                0x00011764                _read_r
+                0x00011774                _close_r
+                0x0001176c                _write_r
+ .text          0x000117c8      0x2c8 ../Library/rprintf.o
+                0x000117c8                rprintf_devopen
+                0x00011818                rprintf
+ .text          0x00011a90      0x1ac ../Library/serial.o
+                0x00011be8                getkey_serial0
+                0x00011ba0                putc_serial1
+                0x00011bc0                putstring_serial0
+                0x00011c04                getc0
+                0x00011a90                init_serial0
+                0x00011c20                getc1
+                0x00011ae8                init_serial1
+                0x00011b40                putchar_serial0
+                0x00011b80                putc_serial0
+ .text          0x00011c3c       0x84 ../Library/spi0.o
+                0x00011ca4                SPI0_recv
+                0x00011c78                SPI0_send_recv
+                0x00011cb8                SPI0_send
+                0x00011c3c                SPI0_Init
+ .text          0x00011cc0      0x484 ../Library/rootdir.o
+                0x00011fd8                root_disk_info
+                0x00011cc0                root_file_exists
+                0x00011d98                rootDirectory_files
+                0x00011cf4                root_delete
+                0x00011d44                root_format
+                0x00012014                root_open_new
+                0x00011e48                rootDirectory_files_stream
+                0x00011ecc                print_disk_info
+                0x00011fe8                root_open
+                0x0001205c                openroot
+ .text          0x00012144      0xc98 ../Library/sd_raw.o
+                0x00012144                sd_raw_available
+                0x00012570                sd_raw_read
+                0x00012bfc                format_card
+                0x000129dc                sd_raw_init
+                0x0001292c                sd_raw_read_interval
+                0x0001228c                SDoff
+                0x000122dc                sd_raw_get_info
+                0x000128e4                sd_raw_sync
+                0x000122b4                SDon
+                0x00012178                sd_raw_locked
+                0x000126d0                sd_raw_write
+ .text          0x00012ddc     0x1890 ../Library/fat16.o
+                0x00013ba0                fat16_resize_file
+                0x000138b8                find_file_in_dir
+                0x0001402c                fat16_close
+                0x00013488                fat16_reset_dir
+                0x000134c4                fat16_delete_file
+                0x00013594                fat16_get_fs_free
+                0x000136a0                fat16_read_dir
+                0x00013d44                fat16_seek_file
+                0x00013570                fat16_get_fs_size
+                0x00014018                fat16_close_file
+                0x000134a4                fat16_set_dir
+                0x000140c0                fat16_open_file
+                0x000132ec                fat16_read_file
+                0x000142a8                fat16_open
+                0x0001449c                fat16_create_file
+                0x00014140                open_file_in_dir
+                0x00014184                fat16_get_dir_entry_of_path
+                0x00013ddc                fat16_write_file
+                0x00014040                fat16_open_dir
+                0x00014004                fat16_close_dir
+                0x00013698                fat16_file_size
+ .text          0x0001466c      0x130 ../Library/partition.o
+                0x0001466c                partition_close
+                0x0001468c                partition_open
+ .text          0x0001479c      0x1a0 ../Library/ADXL345.o
+                0x000148f4                accelY
+                0x0001479c                powerdownAccel
+                0x00014918                accelX
+                0x000147b4                adxl345_write
+                0x00014870                adxl345_read
+                0x000148d0                accelZ
+                0x00014814                initAccel
+ .text          0x0001493c       0xfc ../Library/SCP1000.o
+                0x000149d0                SCPinit
+                0x0001493c                readSCP
+ .text          0x00014a38      0x2a8 ../Library/SHT15.o
+                0x00014aac                sht15_send_byte
+                0x00014a38                sht15_start
+                0x00014b5c                sht15_read_byte
+                0x00014bfc                sht15_read
+ .text          0x00014ce0      0x21c ../Library/gps.o
+                0x00014e60                enable_gps_rmc_msgs
+                0x00014e6c                disable_all_gps_msgs
+                0x00014e54                disable_gps_rmc_msgs
+                0x00014d94                config_gps_msgs
+                0x00014ce0                configure_gps_waas
+                0x00014e3c                disable_gps_gga_msgs
+                0x00014d8c                enable_waas
+                0x00014e48                enable_gps_gga_msgs
+                0x00014ed4                GPS_init_strings
+                0x00014d84                disable_waas
+ .text          0x00014efc      0x110 ../Library/LPCUSB/main_msc.o
+                0x00014efc                main_msc
+ .text          0x0001500c      0x418 ../Library/LPCUSB/msc_bot.o
+                0x00015158                MSCBotBulkIn
+                0x00015404                MSCBotReset
+                0x000151bc                MSCBotBulkOut
+ .text          0x00015424      0x358 ../Library/LPCUSB/msc_scsi.o
+                0x0001556c                SCSIHandleData
+                0x00015438                SCSIHandleCmd
+                0x00015424                SCSIReset
+ .text          0x0001577c      0x510 ../Library/LPCUSB/blockdev_sd.o
+                0x00015a18                BlockDevRead
+                0x00015aac                BlockDevInit
+                0x0001586c                BlockDevGetSize
+                0x00015808                BlockDevWrite
+ .text          0x00015c8c      0x1ec ../Library/LPCUSB/lpc2000_spi.o
+                0x00015c8c                SPISetSpeed
+                0x00015db8                SPIInit
+                0x00015d54                SPIRecvN
+                0x00015ca8                SPISend
+                0x00015cf8                SPISendN
+ .text          0x00015e78       0x74 ../Library/LPCUSB/usbinit.o
+                0x00015e7c                USBInit
+ .text          0x00015eec      0x558 ../Library/LPCUSB/usbhw_lpc.o
+                0x000161a4                USBHwEPRead
+                0x00016258                USBHwISR
+                0x0001611c                USBHwEPWrite
+                0x00015fbc                USBHwEPConfig
+                0x000160ac                USBHwSetAddress
+                0x000160bc                USBHwConnect
+                0x000160fc                USBHwEPStall
+                0x00016064                USBHwRegisterDevIntHandler
+                0x00016018                USBHwRegisterEPIntHandler
+                0x00016248                USBHwConfigDevice
+                0x000160cc                USBHwNakIntEnable
+                0x00016380                USBHwInit
+                0x00016088                USBHwRegisterFrameHandler
+                0x000160d8                USBHwEPGetStatus
+ .text          0x00016444      0x210 ../Library/LPCUSB/usbcontrol.o
+                0x00016508                USBHandleControlTransfer
+                0x00016484                USBRegisterRequestHandler
+ .text          0x00016654      0x31c ../Library/LPCUSB/usbstdreq.o
+                0x00016664                USBGetDescriptor
+                0x000166e8                USBRegisterCustomReqHandler
+                0x00016654                USBRegisterDescriptors
+                0x000166f8                USBHandleStandardRequest
+ .text          0x00016970       0x40 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o)
+                0x00016990                malloc
+                0x00016970                free
+ .text          0x000169b0      0x688 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+                0x000169b0                _malloc_r
+ .text          0x00017038       0x20 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memcpy.o)
+                0x00017038                memcpy
+ .text          0x00017058       0x1c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memset.o)
+                0x00017058                memset
+ .text          0x00017074        0x8 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mlock.o)
+                0x00017078                __malloc_unlock
+                0x00017074                __malloc_lock
+ .text          0x0001707c       0xdc c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(sprintf.o)
+                0x000170f0                _sprintf_r
+                0x0001707c                sprintf
+ .text          0x00017158       0x30 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strchr.o)
+                0x00017158                strchr
+ .text          0x00017188       0x30 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcmp.o)
+                0x00017188                strcmp
+ .text          0x000171b8       0x18 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcpy.o)
+                0x000171b8                strcpy
+ .text          0x000171d0       0x20 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strlen.o)
+                0x000171d0                strlen
+ .text          0x000171f0       0x50 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncmp.o)
+                0x000171f0                strncmp
+ .text          0x00017240       0x4c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncpy.o)
+                0x00017240                strncpy
+ .text          0x0001728c       0x4c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strrchr.o)
+                0x0001728c                strrchr
+ .text          0x000172d8     0x1c7c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+                0x00017314                _vfprintf_r
+                0x00018f28                vfprintf
+ .text          0x00018f54       0x78 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcrtomb.o)
+                0x00018f54                _wcrtomb_r
+                0x00018fa0                wcrtomb
+ .text          0x00018fcc      0x14c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcsrtombs.o)
+                0x00018fcc                _wcsrtombs_r
+                0x000190d8                wcsrtombs
+ .text          0x00019118      0x424 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wctomb_r.o)
+                0x00019118                _wctomb_r
+ .text          0x0001953c       0xe8 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wsetup.o)
+                0x0001953c                __swsetup
+ .text          0x00019624     0x1500 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+                0x00019800                _dtoa_r
+ .text          0x0001ab24       0xd4 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fflush.o)
+                0x0001ab24                fflush
+ .text          0x0001abf8      0x284 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+                0x0001ac54                __sinit
+                0x0001ad1c                __sfmoreglue
+                0x0001ad0c                _cleanup
+                0x0001acf4                _cleanup_r
+                0x0001ad90                __fp_lock_all
+                0x0001acd4                __sfp_lock_acquire
+                0x0001adb4                __sfp
+                0x0001ace0                __sinit_lock_release
+                0x0001ad6c                __fp_unlock_all
+                0x0001acd8                __sfp_lock_release
+                0x0001acdc                __sinit_lock_acquire
+ .text          0x0001ae7c      0x35c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+                0x0001af78                _free_r
+                0x0001ae7c                _malloc_trim_r
+ .text          0x0001b1d8      0x3bc c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+                0x0001b1d8                __sfvwrite
+ .text          0x0001b594       0xf4 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fwalk.o)
+                0x0001b610                _fwalk
+                0x0001b594                _fwalk_reent
+ .text          0x0001b688        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(impure.o)
+ .text          0x0001b688       0xa8 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+                0x0001b6a4                _setlocale_r
+                0x0001b688                __locale_charset
+                0x0001b698                _localeconv_r
+                0x0001b708                setlocale
+                0x0001b724                localeconv
+ .text          0x0001b730      0x13c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(makebuf.o)
+                0x0001b730                __smakebuf
+ .text          0x0001b86c       0x28 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memchr.o)
+                0x0001b86c                memchr
+ .text          0x0001b894       0x54 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memmove.o)
+                0x0001b894                memmove
+ .text          0x0001b8e8      0xb50 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                0x0001bbdc                _mprec_log10
+                0x0001b904                _hi0bits
+                0x0001bc48                _Balloc
+                0x0001bcdc                _d2b
+                0x0001bff4                _multiply
+                0x0001bb60                _ratio
+                0x0001c354                _s2b
+                0x0001c18c                _i2b
+                0x0001b95c                _lo0bits
+                0x0001b9ec                __mcmp
+                0x0001c278                _pow5mult
+                0x0001ba4c                _ulp
+                0x0001baac                _b2d
+                0x0001c1b0                _multadd
+                0x0001bdf0                __mdiff
+                0x0001bf14                _lshift
+                0x0001b8e8                _Bfree
+ .text          0x0001c438      0x4d4 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(reallocr.o)
+                0x0001c438                _realloc_r
+ .text          0x0001c90c       0x2c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isinf.o)
+                0x0001c90c                isinf
+ .text          0x0001c938       0x20 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isnan.o)
+                0x0001c938                isnan
+ .text          0x0001c958      0x110 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+                0x0001c978                __sseek
+                0x0001ca20                __sread
+                0x0001c958                __sclose
+                0x0001c9c0                __swrite
+ .text          0x0001ca68       0x9c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(callocr.o)
+                0x0001ca68                _calloc_r
+ .text          0x0001cb04       0xf8 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+                0x0001cb04                _fclose_r
+                0x0001cbe8                fclose
+ .text          0x0001cbfc      0x114 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+                0x0001cbfc                __udivsi3
+                0x0001cbfc                __aeabi_uidiv
+                0x0001ccf8                __aeabi_uidivmod
+ .text          0x0001cd10      0x144 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+                0x0001cd10                __aeabi_idiv
+                0x0001cd10                __divsi3
+                0x0001ce3c                __aeabi_idivmod
+ .text          0x0001ce54       0xd0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_umodsi3.o)
+                0x0001ce54                __umodsi3
+ .text          0x0001cf24       0xe8 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_modsi3.o)
+                0x0001cf24                __modsi3
+ .text          0x0001d00c        0x4 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_dvmd_tls.o)
+                0x0001d00c                __aeabi_ldiv0
+                0x0001d00c                __div0
+                0x0001d00c                __aeabi_idiv0
+ .text          0x0001d010      0x430 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+                0x0001d3d4                __floatdidf
+                0x0001d354                __floatsidf
+                0x0001d32c                __aeabi_ui2d
+                0x0001d010                __aeabi_drsub
+                0x0001d380                __extendsfdf2
+                0x0001d01c                __adddf3
+                0x0001d32c                __floatunsidf
+                0x0001d01c                __aeabi_dadd
+                0x0001d3c0                __aeabi_ul2d
+                0x0001d018                __aeabi_dsub
+                0x0001d3c0                __floatundidf
+                0x0001d354                __aeabi_i2d
+                0x0001d3d4                __aeabi_l2d
+                0x0001d380                __aeabi_f2d
+                0x0001d018                __subdf3
+ .text          0x0001d440      0x49c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_muldivdf3.o)
+                0x0001d6d0                __aeabi_ddiv
+                0x0001d440                __aeabi_dmul
+                0x0001d6d0                __divdf3
+                0x0001d440                __muldf3
+ .text          0x0001d8dc      0x140 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+                0x0001d9d4                __aeabi_dcmple
+                0x0001d8ec                __cmpdf2
+                0x0001d8ec                __eqdf2
+                0x0001d8dc                __gtdf2
+                0x0001d98c                __aeabi_cdcmple
+                0x0001d970                __aeabi_cdrcmple
+                0x0001d8e4                __ltdf2
+                0x0001d9bc                __aeabi_dcmplt
+                0x0001d8e4                __ledf2
+                0x0001da04                __aeabi_dcmpgt
+                0x0001d9ec                __aeabi_dcmpge
+                0x0001d8ec                __nedf2
+                0x0001d9a4                __aeabi_dcmpeq
+                0x0001d98c                __aeabi_cdcmpeq
+                0x0001d8dc                __gedf2
+ .text          0x0001da1c       0x5c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_fixdfsi.o)
+                0x0001da1c                __fixdfsi
+                0x0001da1c                __aeabi_d2iz
+ *(.gnu.linkonce.t.*)
+ *(.glue_7)
+ .glue_7        0x0001da78        0x0 Startup.o
+ .glue_7        0x0001da78        0x0 main_v20.o
+ .glue_7        0x0001da78        0x0 ../Library/syscalls.o
+ .glue_7        0x0001da78        0x0 ../Library/rprintf.o
+ .glue_7        0x0001da78        0x0 ../Library/serial.o
+ .glue_7        0x0001da78        0x0 ../Library/spi0.o
+ .glue_7        0x0001da78        0x0 ../Library/rootdir.o
+ .glue_7        0x0001da78        0x0 ../Library/sd_raw.o
+ .glue_7        0x0001da78        0x0 ../Library/fat16.o
+ .glue_7        0x0001da78        0x0 ../Library/partition.o
+ .glue_7        0x0001da78        0x0 ../Library/ADXL345.o
+ .glue_7        0x0001da78        0x0 ../Library/SCP1000.o
+ .glue_7        0x0001da78        0x0 ../Library/SHT15.o
+ .glue_7        0x0001da78        0x0 ../Library/gps.o
+ .glue_7        0x0001da78        0x0 ../Library/LPCUSB/main_msc.o
+ .glue_7        0x0001da78        0x0 ../Library/LPCUSB/msc_bot.o
+ .glue_7        0x0001da78        0x0 ../Library/LPCUSB/msc_scsi.o
+ .glue_7        0x0001da78        0x0 ../Library/LPCUSB/blockdev_sd.o
+ .glue_7        0x0001da78        0x0 ../Library/LPCUSB/lpc2000_spi.o
+ .glue_7        0x0001da78        0x0 ../Library/LPCUSB/usbinit.o
+ .glue_7        0x0001da78        0x0 ../Library/LPCUSB/usbhw_lpc.o
+ .glue_7        0x0001da78        0x0 ../Library/LPCUSB/usbcontrol.o
+ .glue_7        0x0001da78        0x0 ../Library/LPCUSB/usbstdreq.o
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memcpy.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memset.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mlock.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(sprintf.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strchr.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcmp.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcpy.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strlen.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncmp.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncpy.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strrchr.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcrtomb.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcsrtombs.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wctomb_r.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wsetup.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fflush.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fwalk.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(impure.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(makebuf.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memchr.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memmove.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(reallocr.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isinf.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isnan.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(callocr.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_umodsi3.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_modsi3.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_dvmd_tls.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_muldivdf3.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+ .glue_7        0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_fixdfsi.o)
+ *(.glue_7t)
+ .glue_7t       0x0001da78        0x0 Startup.o
+ .glue_7t       0x0001da78        0x0 main_v20.o
+ .glue_7t       0x0001da78        0x0 ../Library/syscalls.o
+ .glue_7t       0x0001da78        0x0 ../Library/rprintf.o
+ .glue_7t       0x0001da78        0x0 ../Library/serial.o
+ .glue_7t       0x0001da78        0x0 ../Library/spi0.o
+ .glue_7t       0x0001da78        0x0 ../Library/rootdir.o
+ .glue_7t       0x0001da78        0x0 ../Library/sd_raw.o
+ .glue_7t       0x0001da78        0x0 ../Library/fat16.o
+ .glue_7t       0x0001da78        0x0 ../Library/partition.o
+ .glue_7t       0x0001da78        0x0 ../Library/ADXL345.o
+ .glue_7t       0x0001da78        0x0 ../Library/SCP1000.o
+ .glue_7t       0x0001da78        0x0 ../Library/SHT15.o
+ .glue_7t       0x0001da78        0x0 ../Library/gps.o
+ .glue_7t       0x0001da78        0x0 ../Library/LPCUSB/main_msc.o
+ .glue_7t       0x0001da78        0x0 ../Library/LPCUSB/msc_bot.o
+ .glue_7t       0x0001da78        0x0 ../Library/LPCUSB/msc_scsi.o
+ .glue_7t       0x0001da78        0x0 ../Library/LPCUSB/blockdev_sd.o
+ .glue_7t       0x0001da78        0x0 ../Library/LPCUSB/lpc2000_spi.o
+ .glue_7t       0x0001da78        0x0 ../Library/LPCUSB/usbinit.o
+ .glue_7t       0x0001da78        0x0 ../Library/LPCUSB/usbhw_lpc.o
+ .glue_7t       0x0001da78        0x0 ../Library/LPCUSB/usbcontrol.o
+ .glue_7t       0x0001da78        0x0 ../Library/LPCUSB/usbstdreq.o
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memcpy.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memset.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mlock.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(sprintf.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strchr.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcmp.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcpy.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strlen.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncmp.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncpy.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strrchr.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcrtomb.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcsrtombs.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wctomb_r.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wsetup.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fflush.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fwalk.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(impure.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(makebuf.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memchr.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memmove.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(reallocr.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isinf.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isnan.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(callocr.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_umodsi3.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_modsi3.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_dvmd_tls.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_muldivdf3.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+ .glue_7t       0x0001da78        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_fixdfsi.o)
+ *(.gcc_except_table)
+ *(.rodata)
+ .rodata        0x0001da78       0xe4 ../Library/gps.o
+                0x0001da78                gps_init_string408
+ .rodata        0x0001db5c       0x36 ../Library/LPCUSB/msc_scsi.o
+ .rodata        0x0001db92       0x20 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+ *fill*         0x0001dbb2        0x2 00
+ .rodata        0x0001dbb4        0x4 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(impure.o)
+                0x0001dbb4                _global_impure_ptr
+ .rodata        0x0001dbb8       0x34 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+ .rodata        0x0001dbec      0x124 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                0x0001dcdc                __mprec_tinytens
+                0x0001dbec                __mprec_tens
+                0x0001dcb4                __mprec_bigtens
+ *(.rodata*)
+ .rodata.str1.4
+                0x0001dd10      0x11f main_v20.o
+                                0x120 (size before relaxing)
+ *fill*         0x0001de2f        0x1 00
+ .rodata.str1.4
+                0x0001de30      0x11c ../Library/rootdir.o
+ .rodata.str1.4
+                0x0001df4c       0x68 ../Library/sd_raw.o
+ .rodata.str1.4
+                0x0001dfb4       0x28 ../Library/fat16.o
+ .rodata.str1.4
+                0x0001dfdc       0x20 ../Library/gps.o
+ .rodata.str1.4
+                0x0001dffc       0x34 ../Library/LPCUSB/main_msc.o
+ .rodata.str1.4
+                0x0001e030      0x2a8 ../Library/LPCUSB/blockdev_sd.o
+                                0x2ac (size before relaxing)
+ .rodata.str1.4
+                0x0001e2d8       0x14 ../Library/LPCUSB/lpc2000_spi.o
+ .rodata.str1.4
+                0x0001e2ec       0x5f c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+                                 0x64 (size before relaxing)
+ *fill*         0x0001e34b        0x1 00
+ .rodata.str1.4
+                0x0001e34c       0x1e c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wctomb_r.o)
+                                 0x20 (size before relaxing)
+ *fill*         0x0001e36a        0x2 00
+ .rodata.str1.4
+                0x0001e36c       0x10 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+                                 0x14 (size before relaxing)
+ .rodata.str1.4
+                0x0001e37c        0x2 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(impure.o)
+                                  0x4 (size before relaxing)
+ *fill*         0x0001e37e        0x2 00
+ .rodata.str1.4
+                0x0001e380        0xc c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+                                 0x18 (size before relaxing)
+ *(.gnu.linkonce.r.*)
+                0x0001e38c                . = ALIGN (0x4)
+                0x0001e38c                . = ALIGN (0x4)
+
+.ctors          0x0001e38c        0x0
+                0x0001e38c                PROVIDE (__ctors_start__, .)
+ *(SORT(.ctors.*))
+ *(.ctors)
+                0x0001e38c                . = ALIGN (0x4)
+                0x0001e38c                PROVIDE (__ctors_end__, .)
+                0x0001e38c                . = ALIGN (0x4)
+
+.dtors          0x0001e38c        0x0
+                0x0001e38c                PROVIDE (__dtors_start__, .)
+ *(SORT(.dtors.*))
+ *(.dtors)
+                0x0001e38c                . = ALIGN (0x4)
+                0x0001e38c                PROVIDE (__dtors_end__, .)
+                0x0001e38c                . = ALIGN (0x4)
+                0x0001e38c                . = ALIGN (0x4)
+                0x0001e38c                _etext = .
+                0x0001e38c                PROVIDE (etext, .)
+
+.data           0x40000000      0x89c load address 0x0001e38c
+                0x40000000                _data = .
+ *(.vectmapped)
+                0x40000000                . = ALIGN (0x4)
+ *(.fastrun)
+                0x40000000                . = ALIGN (0x4)
+                0x40000000                . = ALIGN (0x4)
+ *(.data)
+ .data          0x40000000        0x0 Startup.o
+ .data          0x40000000        0x0 main_v20.o
+ .data          0x40000000        0x0 ../Library/syscalls.o
+ .data          0x40000000        0x0 ../Library/rprintf.o
+ .data          0x40000000        0x0 ../Library/serial.o
+ .data          0x40000000        0x0 ../Library/spi0.o
+ .data          0x40000000        0x0 ../Library/rootdir.o
+ .data          0x40000000        0x0 ../Library/sd_raw.o
+ .data          0x40000000        0x0 ../Library/fat16.o
+ .data          0x40000000        0x0 ../Library/partition.o
+ .data          0x40000000        0x0 ../Library/ADXL345.o
+ .data          0x40000000        0x0 ../Library/SCP1000.o
+ .data          0x40000000        0x0 ../Library/SHT15.o
+ .data          0x40000000        0x0 ../Library/gps.o
+ .data          0x40000000       0x75 ../Library/LPCUSB/main_msc.o
+ .data          0x40000075        0x0 ../Library/LPCUSB/msc_bot.o
+ .data          0x40000075        0x0 ../Library/LPCUSB/msc_scsi.o
+ .data          0x40000075        0x0 ../Library/LPCUSB/blockdev_sd.o
+ .data          0x40000075        0x0 ../Library/LPCUSB/lpc2000_spi.o
+ .data          0x40000075        0x0 ../Library/LPCUSB/usbinit.o
+ .data          0x40000075        0x0 ../Library/LPCUSB/usbhw_lpc.o
+ .data          0x40000075        0x0 ../Library/LPCUSB/usbcontrol.o
+ .data          0x40000075        0x0 ../Library/LPCUSB/usbstdreq.o
+ .data          0x40000075        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o)
+ *fill*         0x40000075        0x3 00
+ .data          0x40000078      0x410 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+                0x40000484                __malloc_sbrk_base
+                0x40000078                __malloc_av_
+                0x40000480                __malloc_trim_threshold
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memcpy.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memset.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mlock.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(sprintf.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strchr.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcmp.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcpy.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strlen.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncmp.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncpy.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strrchr.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcrtomb.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcsrtombs.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wctomb_r.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wsetup.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fflush.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+ .data          0x40000488        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fwalk.o)
+ .data          0x40000488      0x404 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(impure.o)
+                0x40000488                _impure_ptr
+ .data          0x4000088c       0x10 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+                0x4000088c                __mb_cur_max
+                0x40000890                __lc_ctype
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(makebuf.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memchr.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memmove.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(reallocr.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isinf.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isnan.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(callocr.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_umodsi3.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_modsi3.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_dvmd_tls.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_muldivdf3.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+ .data          0x4000089c        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_fixdfsi.o)
+ *(.data.*)
+ *(.gnu.linkonce.d*)
+                0x4000089c                . = ALIGN (0x4)
+                0x4000089c                . = ALIGN (0x4)
+                0x4000089c                _edata = .
+                0x4000089c                PROVIDE (edata, .)
+
+.bss            0x4000089c      0xda4
+                0x4000089c                __bss_start = .
+                0x4000089c                __bss_start__ = .
+ *(.bss)
+ .bss           0x4000089c        0x0 Startup.o
+ .bss           0x4000089c       0x1c main_v20.o
+                0x400008b0                led_blink
+                0x400008ac                nmea_data_index
+                0x400008a4                gps_message_size
+                0x400008a8                final_gps_message_size
+                0x400008b1                wake_event
+                0x4000089d                new_gps_data
+                0x400008a0                gps_message_index
+                0x4000089c                gps_message_complete
+ .bss           0x400008b8        0x4 ../Library/syscalls.o
+ .bss           0x400008bc        0x4 ../Library/rprintf.o
+ .bss           0x400008c0        0x0 ../Library/serial.o
+ .bss           0x400008c0        0x0 ../Library/spi0.o
+ .bss           0x400008c0        0x4 ../Library/rootdir.o
+ .bss           0x400008c4      0x208 ../Library/sd_raw.o
+ .bss           0x40000acc        0x0 ../Library/fat16.o
+ .bss           0x40000acc        0x0 ../Library/partition.o
+ .bss           0x40000acc        0x0 ../Library/ADXL345.o
+ .bss           0x40000acc        0x0 ../Library/SCP1000.o
+ .bss           0x40000acc        0x0 ../Library/SHT15.o
+ .bss           0x40000acc        0x4 ../Library/gps.o
+                0x40000acc                locks
+ .bss           0x40000ad0        0x4 ../Library/LPCUSB/main_msc.o
+ .bss           0x40000ad4       0x40 ../Library/LPCUSB/msc_bot.o
+ .bss           0x40000b14      0x204 ../Library/LPCUSB/msc_scsi.o
+ .bss           0x40000d18        0x0 ../Library/LPCUSB/blockdev_sd.o
+ .bss           0x40000d18        0x0 ../Library/LPCUSB/lpc2000_spi.o
+ .bss           0x40000d18        0x8 ../Library/LPCUSB/usbinit.o
+ .bss           0x40000d20       0x48 ../Library/LPCUSB/usbhw_lpc.o
+ .bss           0x40000d68       0x34 ../Library/LPCUSB/usbcontrol.o
+ .bss           0x40000d9c        0xc ../Library/LPCUSB/usbstdreq.o
+ .bss           0x40000da8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o)
+ .bss           0x40000da8       0x34 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+                0x40000da8                __malloc_top_pad
+                0x40000dac                __malloc_max_sbrked_mem
+                0x40000db4                __malloc_current_mallinfo
+                0x40000db0                __malloc_max_total_mem
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memcpy.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memset.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mlock.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(sprintf.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strchr.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcmp.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcpy.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strlen.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncmp.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncpy.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strrchr.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcrtomb.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcsrtombs.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wctomb_r.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wsetup.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fflush.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fwalk.o)
+ .bss           0x40000ddc        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(impure.o)
+ .bss           0x40000ddc        0xc c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+                0x40000ddc                __nlocale_changed
+                0x40000de0                __mlocale_changed
+                0x40000de4                _PathLocale
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(makebuf.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memchr.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memmove.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(reallocr.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isinf.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isnan.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(callocr.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_umodsi3.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_modsi3.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_dvmd_tls.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_muldivdf3.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+ .bss           0x40000de8        0x0 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_fixdfsi.o)
+ *(.gnu.linkonce.b*)
+ *(COMMON)
+ COMMON         0x40000de8      0x819 main_v20.o
+                0x40000de8                log_data_index
+                0x40000dec                scp_temp
+                0x40000df0                sht_humidity
+                0x40000df4                scp_pressure
+                0x40000df8                read_sensors
+                0x40000dfc                battery_level
+                0x40000e00                new_scp_data
+                0x40000e04                power_register_values
+                0x40000e08                log_data
+                0x40001008                acceleration_y
+                0x4000100c                GPS
+                0x40001054                file_name
+                0x40001074                new_sht_data
+                0x40001078                NMEA_FILE
+                0x4000107c                LOG_FILE
+                0x40001080                nmea_data
+                0x40001480                RTC_Set
+                0x40001484                acceleration_z
+                0x40001488                acceleration_x
+                0x4000148c                new_sensor_data
+                0x40001490                sht_temp
+                0x40001494                gps_message
+                0x400014e4                log_count
+                0x400014e8                alarm_set
+                0x400014e9                final_message
+                0x40001539                log_buffer
+ *fill*         0x40001601        0x3 00
+ COMMON         0x40001604       0x3c ../Library/rootdir.o
+                0x40001604                fs
+                0x40001608                dir_entry
+                0x40001634                fd
+                0x40001638                partition
+                0x4000163c                dd
+                0x40001640                . = ALIGN (0x4)
+                0x40001640                . = ALIGN (0x4)
+                0x40001640                __bss_end__ = .
+                0x40001640                PROVIDE (__bss_end, .)
+
+.stack          0x40001700      0xc00
+ *(.stack)
+ .stack         0x40001700      0xc00 Startup.o
+                0x40002300                PROVIDE (_stack, .)
+                0x40002300                . = ALIGN (0x4)
+                0x40002300                _end = .
+                0x40002300                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x61e
+ *(.comment)
+ .comment       0x00000000       0x1b main_v20.o
+ .comment       0x0000001b       0x1b ../Library/syscalls.o
+ .comment       0x00000036       0x1b ../Library/rprintf.o
+ .comment       0x00000051       0x1b ../Library/serial.o
+ .comment       0x0000006c       0x1b ../Library/spi0.o
+ .comment       0x00000087       0x1b ../Library/rootdir.o
+ .comment       0x000000a2       0x1b ../Library/sd_raw.o
+ .comment       0x000000bd       0x1b ../Library/fat16.o
+ .comment       0x000000d8       0x1b ../Library/partition.o
+ .comment       0x000000f3       0x1b ../Library/ADXL345.o
+ .comment       0x0000010e       0x1b ../Library/SCP1000.o
+ .comment       0x00000129       0x1b ../Library/SHT15.o
+ .comment       0x00000144       0x1b ../Library/gps.o
+ .comment       0x0000015f       0x1b ../Library/LPCUSB/main_msc.o
+ .comment       0x0000017a       0x1b ../Library/LPCUSB/msc_bot.o
+ .comment       0x00000195       0x1b ../Library/LPCUSB/msc_scsi.o
+ .comment       0x000001b0       0x1b ../Library/LPCUSB/blockdev_sd.o
+ .comment       0x000001cb       0x1b ../Library/LPCUSB/lpc2000_spi.o
+ .comment       0x000001e6       0x1b ../Library/LPCUSB/usbinit.o
+ .comment       0x00000201       0x1b ../Library/LPCUSB/usbhw_lpc.o
+ .comment       0x0000021c       0x1b ../Library/LPCUSB/usbcontrol.o
+ .comment       0x00000237       0x1b ../Library/LPCUSB/usbstdreq.o
+ .comment       0x00000252       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o)
+ .comment       0x0000026d       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+ .comment       0x00000288       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memcpy.o)
+ .comment       0x000002a3       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memset.o)
+ .comment       0x000002be       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mlock.o)
+ .comment       0x000002d9       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(sprintf.o)
+ .comment       0x000002f4       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strchr.o)
+ .comment       0x0000030f       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcmp.o)
+ .comment       0x0000032a       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcpy.o)
+ .comment       0x00000345       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strlen.o)
+ .comment       0x00000360       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncmp.o)
+ .comment       0x0000037b       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncpy.o)
+ .comment       0x00000396       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strrchr.o)
+ .comment       0x000003b1       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+ .comment       0x000003cc       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcrtomb.o)
+ .comment       0x000003e7       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcsrtombs.o)
+ .comment       0x00000402       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wctomb_r.o)
+ .comment       0x0000041d       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wsetup.o)
+ .comment       0x00000438       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+ .comment       0x00000453       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fflush.o)
+ .comment       0x0000046e       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+ .comment       0x00000489       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+ .comment       0x000004a4       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+ .comment       0x000004bf       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fwalk.o)
+ .comment       0x000004da       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(impure.o)
+ .comment       0x000004f5       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+ .comment       0x00000510       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(makebuf.o)
+ .comment       0x0000052b       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memchr.o)
+ .comment       0x00000546       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memmove.o)
+ .comment       0x00000561       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+ .comment       0x0000057c       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(reallocr.o)
+ .comment       0x00000597       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isinf.o)
+ .comment       0x000005b2       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isnan.o)
+ .comment       0x000005cd       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+ .comment       0x000005e8       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(callocr.o)
+ .comment       0x00000603       0x1b c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x408
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 Startup.o
+ .debug_aranges
+                0x00000028       0x20 main_v20.o
+ .debug_aranges
+                0x00000048       0x20 ../Library/syscalls.o
+ .debug_aranges
+                0x00000068       0x20 ../Library/rprintf.o
+ .debug_aranges
+                0x00000088       0x20 ../Library/serial.o
+ .debug_aranges
+                0x000000a8       0x20 ../Library/spi0.o
+ .debug_aranges
+                0x000000c8       0x20 ../Library/rootdir.o
+ .debug_aranges
+                0x000000e8       0x20 ../Library/sd_raw.o
+ .debug_aranges
+                0x00000108       0x20 ../Library/fat16.o
+ .debug_aranges
+                0x00000128       0x20 ../Library/partition.o
+ .debug_aranges
+                0x00000148       0x20 ../Library/ADXL345.o
+ .debug_aranges
+                0x00000168       0x20 ../Library/SCP1000.o
+ .debug_aranges
+                0x00000188       0x20 ../Library/SHT15.o
+ .debug_aranges
+                0x000001a8       0x20 ../Library/gps.o
+ .debug_aranges
+                0x000001c8       0x20 ../Library/LPCUSB/main_msc.o
+ .debug_aranges
+                0x000001e8       0x20 ../Library/LPCUSB/msc_bot.o
+ .debug_aranges
+                0x00000208       0x20 ../Library/LPCUSB/msc_scsi.o
+ .debug_aranges
+                0x00000228       0x20 ../Library/LPCUSB/blockdev_sd.o
+ .debug_aranges
+                0x00000248       0x20 ../Library/LPCUSB/lpc2000_spi.o
+ .debug_aranges
+                0x00000268       0x20 ../Library/LPCUSB/usbinit.o
+ .debug_aranges
+                0x00000288       0x20 ../Library/LPCUSB/usbhw_lpc.o
+ .debug_aranges
+                0x000002a8       0x20 ../Library/LPCUSB/usbcontrol.o
+ .debug_aranges
+                0x000002c8       0x20 ../Library/LPCUSB/usbstdreq.o
+ .debug_aranges
+                0x000002e8       0x20 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+ .debug_aranges
+                0x00000308       0x20 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+ .debug_aranges
+                0x00000328       0x20 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_umodsi3.o)
+ .debug_aranges
+                0x00000348       0x20 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_modsi3.o)
+ .debug_aranges
+                0x00000368       0x20 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_dvmd_tls.o)
+ .debug_aranges
+                0x00000388       0x20 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+ .debug_aranges
+                0x000003a8       0x20 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_muldivdf3.o)
+ .debug_aranges
+                0x000003c8       0x20 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+ .debug_aranges
+                0x000003e8       0x20 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_fixdfsi.o)
+
+.debug_pubnames
+                0x00000000      0xddb
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x305 main_v20.o
+ .debug_pubnames
+                0x00000305       0x69 ../Library/syscalls.o
+ .debug_pubnames
+                0x0000036e       0x32 ../Library/rprintf.o
+ .debug_pubnames
+                0x000003a0       0xa7 ../Library/serial.o
+ .debug_pubnames
+                0x00000447       0x4f ../Library/spi0.o
+ .debug_pubnames
+                0x00000496      0x103 ../Library/rootdir.o
+ .debug_pubnames
+                0x00000599       0xca ../Library/sd_raw.o
+ .debug_pubnames
+                0x00000663      0x1c3 ../Library/fat16.o
+ .debug_pubnames
+                0x00000826       0x39 ../Library/partition.o
+ .debug_pubnames
+                0x0000085f       0x77 ../Library/ADXL345.o
+ .debug_pubnames
+                0x000008d6       0x2a ../Library/SCP1000.o
+ .debug_pubnames
+                0x00000900       0x59 ../Library/SHT15.o
+ .debug_pubnames
+                0x00000959      0x10f ../Library/gps.o
+ .debug_pubnames
+                0x00000a68       0x1f ../Library/LPCUSB/main_msc.o
+ .debug_pubnames
+                0x00000a87       0x45 ../Library/LPCUSB/msc_bot.o
+ .debug_pubnames
+                0x00000acc       0x45 ../Library/LPCUSB/msc_scsi.o
+ .debug_pubnames
+                0x00000b11       0x5a ../Library/LPCUSB/blockdev_sd.o
+ .debug_pubnames
+                0x00000b6b       0x54 ../Library/LPCUSB/lpc2000_spi.o
+ .debug_pubnames
+                0x00000bbf       0x1e ../Library/LPCUSB/usbinit.o
+ .debug_pubnames
+                0x00000bdd      0x132 ../Library/LPCUSB/usbhw_lpc.o
+ .debug_pubnames
+                0x00000d0f       0x4d ../Library/LPCUSB/usbcontrol.o
+ .debug_pubnames
+                0x00000d5c       0x7f ../Library/LPCUSB/usbstdreq.o
+
+.debug_info     0x00000000     0x645e
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000       0x82 Startup.o
+ .debug_info    0x00000082      0x983 main_v20.o
+ .debug_info    0x00000a05      0xc8e ../Library/syscalls.o
+ .debug_info    0x00001693      0x201 ../Library/rprintf.o
+ .debug_info    0x00001894      0x1a8 ../Library/serial.o
+ .debug_info    0x00001a3c       0xfa ../Library/spi0.o
+ .debug_info    0x00001b36      0x554 ../Library/rootdir.o
+ .debug_info    0x0000208a      0x6ab ../Library/sd_raw.o
+ .debug_info    0x00002735     0x147f ../Library/fat16.o
+ .debug_info    0x00003bb4      0x28b ../Library/partition.o
+ .debug_info    0x00003e3f      0x1ec ../Library/ADXL345.o
+ .debug_info    0x0000402b       0xa7 ../Library/SCP1000.o
+ .debug_info    0x000040d2      0x145 ../Library/SHT15.o
+ .debug_info    0x00004217      0x29d ../Library/gps.o
+ .debug_info    0x000044b4      0x1b1 ../Library/LPCUSB/main_msc.o
+ .debug_info    0x00004665      0x3be ../Library/LPCUSB/msc_bot.o
+ .debug_info    0x00004a23      0x2e8 ../Library/LPCUSB/msc_scsi.o
+ .debug_info    0x00004d0b      0x368 ../Library/LPCUSB/blockdev_sd.o
+ .debug_info    0x00005073      0x1d9 ../Library/LPCUSB/lpc2000_spi.o
+ .debug_info    0x0000524c       0xbc ../Library/LPCUSB/usbinit.o
+ .debug_info    0x00005308      0x601 ../Library/LPCUSB/usbhw_lpc.o
+ .debug_info    0x00005909      0x2e2 ../Library/LPCUSB/usbcontrol.o
+ .debug_info    0x00005beb      0x463 ../Library/LPCUSB/usbstdreq.o
+ .debug_info    0x0000604e       0x74 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+ .debug_info    0x000060c2       0x74 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+ .debug_info    0x00006136       0x74 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_umodsi3.o)
+ .debug_info    0x000061aa       0x74 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_modsi3.o)
+ .debug_info    0x0000621e       0x74 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_dvmd_tls.o)
+ .debug_info    0x00006292       0x73 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+ .debug_info    0x00006305       0x73 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_muldivdf3.o)
+ .debug_info    0x00006378       0x73 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+ .debug_info    0x000063eb       0x73 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_fixdfsi.o)
+
+.debug_abbrev   0x00000000     0x1f22
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x10 Startup.o
+ .debug_abbrev  0x00000010      0x243 main_v20.o
+ .debug_abbrev  0x00000253      0x1c5 ../Library/syscalls.o
+ .debug_abbrev  0x00000418      0x144 ../Library/rprintf.o
+ .debug_abbrev  0x0000055c       0xbb ../Library/serial.o
+ .debug_abbrev  0x00000617       0xa0 ../Library/spi0.o
+ .debug_abbrev  0x000006b7      0x16d ../Library/rootdir.o
+ .debug_abbrev  0x00000824      0x272 ../Library/sd_raw.o
+ .debug_abbrev  0x00000a96      0x2fa ../Library/fat16.o
+ .debug_abbrev  0x00000d90       0xd4 ../Library/partition.o
+ .debug_abbrev  0x00000e64       0xb7 ../Library/ADXL345.o
+ .debug_abbrev  0x00000f1b       0x7b ../Library/SCP1000.o
+ .debug_abbrev  0x00000f96       0xd9 ../Library/SHT15.o
+ .debug_abbrev  0x0000106f      0x109 ../Library/gps.o
+ .debug_abbrev  0x00001178       0xc7 ../Library/LPCUSB/main_msc.o
+ .debug_abbrev  0x0000123f      0x1e3 ../Library/LPCUSB/msc_bot.o
+ .debug_abbrev  0x00001422      0x10f ../Library/LPCUSB/msc_scsi.o
+ .debug_abbrev  0x00001531      0x1bd ../Library/LPCUSB/blockdev_sd.o
+ .debug_abbrev  0x000016ee      0x12f ../Library/LPCUSB/lpc2000_spi.o
+ .debug_abbrev  0x0000181d       0xa0 ../Library/LPCUSB/usbinit.o
+ .debug_abbrev  0x000018bd      0x25b ../Library/LPCUSB/usbhw_lpc.o
+ .debug_abbrev  0x00001b18      0x14c ../Library/LPCUSB/usbcontrol.o
+ .debug_abbrev  0x00001c64      0x20a ../Library/LPCUSB/usbstdreq.o
+ .debug_abbrev  0x00001e6e       0x14 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+ .debug_abbrev  0x00001e82       0x14 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+ .debug_abbrev  0x00001e96       0x14 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_umodsi3.o)
+ .debug_abbrev  0x00001eaa       0x14 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_modsi3.o)
+ .debug_abbrev  0x00001ebe       0x14 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_dvmd_tls.o)
+ .debug_abbrev  0x00001ed2       0x14 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+ .debug_abbrev  0x00001ee6       0x14 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_muldivdf3.o)
+ .debug_abbrev  0x00001efa       0x14 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+ .debug_abbrev  0x00001f0e       0x14 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_fixdfsi.o)
+
+.debug_line     0x00000000     0x2038
+ *(.debug_line)
+ .debug_line    0x00000000       0xa3 Startup.o
+ .debug_line    0x000000a3      0x308 main_v20.o
+ .debug_line    0x000003ab      0x168 ../Library/syscalls.o
+ .debug_line    0x00000513       0xcc ../Library/rprintf.o
+ .debug_line    0x000005df       0x7b ../Library/serial.o
+ .debug_line    0x0000065a       0x56 ../Library/spi0.o
+ .debug_line    0x000006b0      0x15b ../Library/rootdir.o
+ .debug_line    0x0000080b      0x239 ../Library/sd_raw.o
+ .debug_line    0x00000a44      0x4c9 ../Library/fat16.o
+ .debug_line    0x00000f0d       0xcf ../Library/partition.o
+ .debug_line    0x00000fdc       0x90 ../Library/ADXL345.o
+ .debug_line    0x0000106c       0x71 ../Library/SCP1000.o
+ .debug_line    0x000010dd       0xc0 ../Library/SHT15.o
+ .debug_line    0x0000119d       0x86 ../Library/gps.o
+ .debug_line    0x00001223       0x8a ../Library/LPCUSB/main_msc.o
+ .debug_line    0x000012ad      0x10b ../Library/LPCUSB/msc_bot.o
+ .debug_line    0x000013b8       0xce ../Library/LPCUSB/msc_scsi.o
+ .debug_line    0x00001486      0x110 ../Library/LPCUSB/blockdev_sd.o
+ .debug_line    0x00001596       0x97 ../Library/LPCUSB/lpc2000_spi.o
+ .debug_line    0x0000162d       0x63 ../Library/LPCUSB/usbinit.o
+ .debug_line    0x00001690      0x17e ../Library/LPCUSB/usbhw_lpc.o
+ .debug_line    0x0000180e       0xc5 ../Library/LPCUSB/usbcontrol.o
+ .debug_line    0x000018d3       0xff ../Library/LPCUSB/usbstdreq.o
+ .debug_line    0x000019d2       0x87 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+ .debug_line    0x00001a59       0x93 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+ .debug_line    0x00001aec       0x71 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_umodsi3.o)
+ .debug_line    0x00001b5d       0x77 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_modsi3.o)
+ .debug_line    0x00001bd4       0x60 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_dvmd_tls.o)
+ .debug_line    0x00001c34      0x168 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+ .debug_line    0x00001d9c      0x17d c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_muldivdf3.o)
+ .debug_line    0x00001f19       0xaa c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+ .debug_line    0x00001fc3       0x75 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_fixdfsi.o)
+
+.debug_frame    0x00000000     0x11f4
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x1c0 main_v20.o
+ .debug_frame   0x000001c0       0x80 ../Library/syscalls.o
+ .debug_frame   0x00000240       0x68 ../Library/rprintf.o
+ .debug_frame   0x000002a8       0xb8 ../Library/serial.o
+ .debug_frame   0x00000360       0x58 ../Library/spi0.o
+ .debug_frame   0x000003b8      0x108 ../Library/rootdir.o
+ .debug_frame   0x000004c0      0x164 ../Library/sd_raw.o
+ .debug_frame   0x00000624      0x34c ../Library/fat16.o
+ .debug_frame   0x00000970       0x4c ../Library/partition.o
+ .debug_frame   0x000009bc       0xc4 ../Library/ADXL345.o
+ .debug_frame   0x00000a80       0x4c ../Library/SCP1000.o
+ .debug_frame   0x00000acc       0x88 ../Library/SHT15.o
+ .debug_frame   0x00000b54       0xd8 ../Library/gps.o
+ .debug_frame   0x00000c2c       0x40 ../Library/LPCUSB/main_msc.o
+ .debug_frame   0x00000c6c       0xac ../Library/LPCUSB/msc_bot.o
+ .debug_frame   0x00000d18       0x64 ../Library/LPCUSB/msc_scsi.o
+ .debug_frame   0x00000d7c       0xc8 ../Library/LPCUSB/blockdev_sd.o
+ .debug_frame   0x00000e44       0x68 ../Library/LPCUSB/lpc2000_spi.o
+ .debug_frame   0x00000eac       0x38 ../Library/LPCUSB/usbinit.o
+ .debug_frame   0x00000ee4      0x168 ../Library/LPCUSB/usbhw_lpc.o
+ .debug_frame   0x0000104c       0x8c ../Library/LPCUSB/usbcontrol.o
+ .debug_frame   0x000010d8       0x6c ../Library/LPCUSB/usbstdreq.o
+ .debug_frame   0x00001144       0x2c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00001170       0x2c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+ .debug_frame   0x0000119c       0x2c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_umodsi3.o)
+ .debug_frame   0x000011c8       0x2c c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_modsi3.o)
+
+.debug_str      0x00000000     0x1ef6
+ *(.debug_str)
+ .debug_str     0x00000000      0x3c6 main_v20.o
+                                0x41c (size before relaxing)
+ .debug_str     0x000003c6      0x495 ../Library/syscalls.o
+                                0x5ea (size before relaxing)
+ .debug_str     0x0000085b       0x9d ../Library/rprintf.o
+                                0x19b (size before relaxing)
+ .debug_str     0x000008f8       0x93 ../Library/serial.o
+                                0x11e (size before relaxing)
+ .debug_str     0x0000098b       0x3f ../Library/spi0.o
+                                0x135 (size before relaxing)
+ .debug_str     0x000009ca      0x24a ../Library/rootdir.o
+                                0x3af (size before relaxing)
+ .debug_str     0x00000c14      0x190 ../Library/sd_raw.o
+                                0x365 (size before relaxing)
+ .debug_str     0x00000da4      0x5cc ../Library/fat16.o
+                                0x87a (size before relaxing)
+ .debug_str     0x00001370       0x4b ../Library/partition.o
+                                0x210 (size before relaxing)
+ .debug_str     0x000013bb       0xab ../Library/ADXL345.o
+                                0x1a7 (size before relaxing)
+ .debug_str     0x00001466       0x40 ../Library/SCP1000.o
+                                 0xde (size before relaxing)
+ .debug_str     0x000014a6       0x6d ../Library/SHT15.o
+                                0x125 (size before relaxing)
+ .debug_str     0x00001513       0xf4 ../Library/gps.o
+                                0x206 (size before relaxing)
+ .debug_str     0x00001607       0x9c ../Library/LPCUSB/main_msc.o
+                                0x1a0 (size before relaxing)
+ .debug_str     0x000016a3      0x178 ../Library/LPCUSB/msc_bot.o
+                                0x297 (size before relaxing)
+ .debug_str     0x0000181b       0xef ../Library/LPCUSB/msc_scsi.o
+                                0x1fa (size before relaxing)
+ .debug_str     0x0000190a       0xc9 ../Library/LPCUSB/blockdev_sd.o
+                                0x1ef (size before relaxing)
+ .debug_str     0x000019d3       0x69 ../Library/LPCUSB/lpc2000_spi.o
+                                0x172 (size before relaxing)
+ .debug_str     0x00001a3c       0x4b ../Library/LPCUSB/usbinit.o
+                                 0xfd (size before relaxing)
+ .debug_str     0x00001a87      0x257 ../Library/LPCUSB/usbhw_lpc.o
+                                0x325 (size before relaxing)
+ .debug_str     0x00001cde       0xa6 ../Library/LPCUSB/usbcontrol.o
+                                0x1ef (size before relaxing)
+ .debug_str     0x00001d84      0x172 ../Library/LPCUSB/usbstdreq.o
+                                0x284 (size before relaxing)
+
+.debug_loc      0x00000000     0x3966
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x50c main_v20.o
+ .debug_loc     0x0000050c       0x98 ../Library/syscalls.o
+ .debug_loc     0x000005a4      0x2a4 ../Library/rprintf.o
+ .debug_loc     0x00000848      0x119 ../Library/serial.o
+ .debug_loc     0x00000961       0x45 ../Library/spi0.o
+ .debug_loc     0x000009a6      0x23f ../Library/rootdir.o
+ .debug_loc     0x00000be5      0x5e6 ../Library/sd_raw.o
+ .debug_loc     0x000011cb     0x1279 ../Library/fat16.o
+ .debug_loc     0x00002444      0x114 ../Library/partition.o
+ .debug_loc     0x00002558      0x114 ../Library/ADXL345.o
+ .debug_loc     0x0000266c       0x7a ../Library/SCP1000.o
+ .debug_loc     0x000026e6      0x125 ../Library/SHT15.o
+ .debug_loc     0x0000280b      0x150 ../Library/gps.o
+ .debug_loc     0x0000295b       0xae ../Library/LPCUSB/main_msc.o
+ .debug_loc     0x00002a09      0x263 ../Library/LPCUSB/msc_bot.o
+ .debug_loc     0x00002c6c      0x1b8 ../Library/LPCUSB/msc_scsi.o
+ .debug_loc     0x00002e24      0x2dc ../Library/LPCUSB/blockdev_sd.o
+ .debug_loc     0x00003100       0x50 ../Library/LPCUSB/lpc2000_spi.o
+ .debug_loc     0x00003150       0x1f ../Library/LPCUSB/usbinit.o
+ .debug_loc     0x0000316f      0x36d ../Library/LPCUSB/usbhw_lpc.o
+ .debug_loc     0x000034dc      0x1cf ../Library/LPCUSB/usbcontrol.o
+ .debug_loc     0x000036ab      0x2bb ../Library/LPCUSB/usbstdreq.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+OUTPUT(main.elf elf32-littlearm)
+
+.debug_ranges   0x00000000      0x418
+ .debug_ranges  0x00000000       0xd0 main_v20.o
+ .debug_ranges  0x000000d0       0x18 ../Library/rprintf.o
+ .debug_ranges  0x000000e8       0x48 ../Library/sd_raw.o
+ .debug_ranges  0x00000130      0x1b0 ../Library/fat16.o
+ .debug_ranges  0x000002e0       0x30 ../Library/LPCUSB/msc_bot.o
+ .debug_ranges  0x00000310       0x18 ../Library/LPCUSB/blockdev_sd.o
+ .debug_ranges  0x00000328       0x18 ../Library/LPCUSB/lpc2000_spi.o
+ .debug_ranges  0x00000340       0x78 ../Library/LPCUSB/usbhw_lpc.o
+ .debug_ranges  0x000003b8       0x60 ../Library/LPCUSB/usbstdreq.o
+
+Cross Reference Table
+
+Symbol                                            File
+BlockDevGetSize                                   ../Library/LPCUSB/blockdev_sd.o
+                                                  ../Library/LPCUSB/msc_scsi.o
+BlockDevInit                                      ../Library/LPCUSB/blockdev_sd.o
+                                                  ../Library/LPCUSB/main_msc.o
+BlockDevRead                                      ../Library/LPCUSB/blockdev_sd.o
+                                                  ../Library/LPCUSB/msc_scsi.o
+BlockDevWrite                                     ../Library/LPCUSB/blockdev_sd.o
+                                                  ../Library/LPCUSB/msc_scsi.o
+GPS                                               main_v20.o
+GPS_init_strings                                  ../Library/gps.o
+LOG_FILE                                          main_v20.o
+MSCBotBulkIn                                      ../Library/LPCUSB/msc_bot.o
+                                                  ../Library/LPCUSB/main_msc.o
+MSCBotBulkOut                                     ../Library/LPCUSB/msc_bot.o
+                                                  ../Library/LPCUSB/main_msc.o
+MSCBotReset                                       ../Library/LPCUSB/msc_bot.o
+                                                  ../Library/LPCUSB/main_msc.o
+NMEA_FILE                                         main_v20.o
+RTC_Set                                           main_v20.o
+SCPinit                                           ../Library/SCP1000.o
+                                                  main_v20.o
+SCSIHandleCmd                                     ../Library/LPCUSB/msc_scsi.o
+                                                  ../Library/LPCUSB/msc_bot.o
+SCSIHandleData                                    ../Library/LPCUSB/msc_scsi.o
+                                                  ../Library/LPCUSB/msc_bot.o
+SCSIReset                                         ../Library/LPCUSB/msc_scsi.o
+                                                  ../Library/LPCUSB/msc_bot.o
+SDoff                                             ../Library/sd_raw.o
+SDon                                              ../Library/sd_raw.o
+SPI0_Init                                         ../Library/spi0.o
+                                                  main_v20.o
+SPI0_recv                                         ../Library/spi0.o
+                                                  ../Library/SCP1000.o
+                                                  ../Library/ADXL345.o
+SPI0_send                                         ../Library/spi0.o
+                                                  ../Library/SCP1000.o
+                                                  ../Library/ADXL345.o
+SPI0_send_recv                                    ../Library/spi0.o
+SPIInit                                           ../Library/LPCUSB/lpc2000_spi.o
+                                                  ../Library/LPCUSB/blockdev_sd.o
+SPIRecvN                                          ../Library/LPCUSB/lpc2000_spi.o
+                                                  ../Library/LPCUSB/blockdev_sd.o
+SPISend                                           ../Library/LPCUSB/lpc2000_spi.o
+                                                  ../Library/LPCUSB/blockdev_sd.o
+SPISendN                                          ../Library/LPCUSB/lpc2000_spi.o
+                                                  ../Library/LPCUSB/blockdev_sd.o
+SPISetSpeed                                       ../Library/LPCUSB/lpc2000_spi.o
+                                                  ../Library/LPCUSB/blockdev_sd.o
+USBGetDescriptor                                  ../Library/LPCUSB/usbstdreq.o
+USBHandleControlTransfer                          ../Library/LPCUSB/usbcontrol.o
+                                                  ../Library/LPCUSB/usbinit.o
+USBHandleStandardRequest                          ../Library/LPCUSB/usbstdreq.o
+                                                  ../Library/LPCUSB/usbinit.o
+USBHwConfigDevice                                 ../Library/LPCUSB/usbhw_lpc.o
+                                                  ../Library/LPCUSB/usbstdreq.o
+USBHwConnect                                      ../Library/LPCUSB/usbhw_lpc.o
+                                                  ../Library/LPCUSB/main_msc.o
+USBHwEPConfig                                     ../Library/LPCUSB/usbhw_lpc.o
+                                                  ../Library/LPCUSB/usbstdreq.o
+                                                  ../Library/LPCUSB/usbinit.o
+USBHwEPGetStatus                                  ../Library/LPCUSB/usbhw_lpc.o
+                                                  ../Library/LPCUSB/usbstdreq.o
+USBHwEPRead                                       ../Library/LPCUSB/usbhw_lpc.o
+                                                  ../Library/LPCUSB/usbcontrol.o
+                                                  ../Library/LPCUSB/msc_bot.o
+USBHwEPStall                                      ../Library/LPCUSB/usbhw_lpc.o
+                                                  ../Library/LPCUSB/usbstdreq.o
+                                                  ../Library/LPCUSB/usbcontrol.o
+                                                  ../Library/LPCUSB/msc_bot.o
+USBHwEPWrite                                      ../Library/LPCUSB/usbhw_lpc.o
+                                                  ../Library/LPCUSB/usbcontrol.o
+                                                  ../Library/LPCUSB/msc_bot.o
+USBHwISR                                          ../Library/LPCUSB/usbhw_lpc.o
+                                                  ../Library/LPCUSB/main_msc.o
+USBHwInit                                         ../Library/LPCUSB/usbhw_lpc.o
+                                                  ../Library/LPCUSB/usbinit.o
+USBHwNakIntEnable                                 ../Library/LPCUSB/usbhw_lpc.o
+                                                  ../Library/LPCUSB/main_msc.o
+USBHwRegisterDevIntHandler                        ../Library/LPCUSB/usbhw_lpc.o
+                                                  ../Library/LPCUSB/usbinit.o
+USBHwRegisterEPIntHandler                         ../Library/LPCUSB/usbhw_lpc.o
+                                                  ../Library/LPCUSB/usbinit.o
+                                                  ../Library/LPCUSB/main_msc.o
+USBHwRegisterFrameHandler                         ../Library/LPCUSB/usbhw_lpc.o
+USBHwSetAddress                                   ../Library/LPCUSB/usbhw_lpc.o
+                                                  ../Library/LPCUSB/usbstdreq.o
+USBInit                                           ../Library/LPCUSB/usbinit.o
+                                                  ../Library/LPCUSB/main_msc.o
+USBRegisterCustomReqHandler                       ../Library/LPCUSB/usbstdreq.o
+USBRegisterDescriptors                            ../Library/LPCUSB/usbstdreq.o
+                                                  ../Library/LPCUSB/main_msc.o
+USBRegisterRequestHandler                         ../Library/LPCUSB/usbcontrol.o
+                                                  ../Library/LPCUSB/usbinit.o
+                                                  ../Library/LPCUSB/main_msc.o
+_Balloc                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+_Bfree                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+_PathLocale                                       c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+__IRQ_Wrapper                                     Startup.o
+__adddf3                                          c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+                                                  main_v20.o
+__aeabi_cdcmpeq                                   c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+__aeabi_cdcmple                                   c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+__aeabi_cdrcmple                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+__aeabi_d2iz                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_fixdfsi.o)
+__aeabi_dadd                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+__aeabi_dcmpeq                                    c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+__aeabi_dcmpge                                    c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+__aeabi_dcmpgt                                    c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+__aeabi_dcmple                                    c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+__aeabi_dcmplt                                    c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+__aeabi_ddiv                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_muldivdf3.o)
+__aeabi_dmul                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_muldivdf3.o)
+__aeabi_drsub                                     c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+__aeabi_dsub                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+__aeabi_f2d                                       c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+__aeabi_i2d                                       c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+__aeabi_idiv                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+__aeabi_idiv0                                     c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_dvmd_tls.o)
+__aeabi_idivmod                                   c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+__aeabi_l2d                                       c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+__aeabi_ldiv0                                     c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_dvmd_tls.o)
+__aeabi_ui2d                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+__aeabi_uidiv                                     c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+__aeabi_uidivmod                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+__aeabi_ul2d                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+__bss_end__                                       Startup.o
+__bss_start__                                     Startup.o
+__cmpdf2                                          c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+__ctors_end__                                     Startup.o
+__ctors_start__                                   Startup.o
+__div0                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_dvmd_tls.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_modsi3.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_umodsi3.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+__divdf3                                          c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_muldivdf3.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+__divsi3                                          c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_divsi3.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+                                                  ../Library/fat16.o
+                                                  main_v20.o
+__eqdf2                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+__exit_ARM                                        Startup.o
+__exit_THUMB                                      Startup.o
+__extendsfdf2                                     c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+__fixdfsi                                         c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_fixdfsi.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+                                                  main_v20.o
+__floatdidf                                       c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+__floatsidf                                       c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+                                                  main_v20.o
+__floatundidf                                     c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+__floatunsidf                                     c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+__fp_lock_all                                     c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+__fp_unlock_all                                   c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+__gedf2                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+__gtdf2                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+__lc_ctype                                        c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wctomb_r.o)
+__ledf2                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+__locale_charset                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+__ltdf2                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+__malloc_av_                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(reallocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+__malloc_current_mallinfo                         c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+__malloc_lock                                     c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mlock.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(reallocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+__malloc_max_sbrked_mem                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+__malloc_max_total_mem                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+__malloc_sbrk_base                                c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+__malloc_top_pad                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+__malloc_trim_threshold                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+__malloc_unlock                                   c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mlock.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(reallocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+__mb_cur_max                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+__mcmp                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+__mdiff                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+__mlocale_changed                                 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+__modsi3                                          c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_modsi3.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+                                                  main_v20.o
+__mprec_bigtens                                   c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+__mprec_tens                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+__mprec_tinytens                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+__muldf3                                          c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_muldivdf3.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+                                                  main_v20.o
+__nedf2                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_cmpdf2.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+__nlocale_changed                                 c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+__sclose                                          c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+__sfmoreglue                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+__sfp                                             c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+__sfp_lock_acquire                                c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fwalk.o)
+__sfp_lock_release                                c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fwalk.o)
+__sfvwrite                                        c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+__sinit                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fflush.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wsetup.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+__sinit_lock_acquire                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+__sinit_lock_release                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+__smakebuf                                        c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(makebuf.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wsetup.o)
+__sread                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+__sseek                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(makebuf.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+__startup                                         Startup.o
+__subdf3                                          c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_addsubdf3.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+__swrite                                          c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+__swsetup                                         c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wsetup.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+__udivsi3                                         c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_udivsi3.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+                                                  ../Library/SHT15.o
+                                                  ../Library/fat16.o
+                                                  ../Library/serial.o
+                                                  ../Library/rprintf.o
+                                                  main_v20.o
+__umodsi3                                         c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/interwork\libgcc.a(_umodsi3.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+                                                  ../Library/fat16.o
+                                                  ../Library/rprintf.o
+                                                  main_v20.o
+_b2d                                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+_calloc_r                                         c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(callocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+_cleanup                                          c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+_cleanup_r                                        c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(makebuf.o)
+_close_r                                          ../Library/syscalls.o
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+_d2b                                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+_data                                             Startup.o
+_dtoa_r                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+_edata                                            Startup.o
+_etext                                            Startup.o
+_fclose_r                                         c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+_free_r                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(reallocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wsetup.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o)
+_fstat_r                                          ../Library/syscalls.o
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(makebuf.o)
+_fwalk                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fwalk.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fflush.o)
+_fwalk_reent                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fwalk.o)
+_global_impure_ptr                                c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(impure.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fflush.o)
+_hi0bits                                          c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+_i2b                                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+_impure_ptr                                       c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(impure.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(makebuf.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fflush.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wsetup.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcsrtombs.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcrtomb.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(sprintf.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o)
+_lo0bits                                          c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+_localeconv_r                                     c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+_lseek_r                                          ../Library/syscalls.o
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+_lshift                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+_malloc_r                                         c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(callocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(reallocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(makebuf.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o)
+_malloc_trim_r                                    c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+_mprec_log10                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+_multadd                                          c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+_multiply                                         c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+_pow5mult                                         c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+_ratio                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+_read_r                                           ../Library/syscalls.o
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+_realloc_r                                        c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(reallocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+_s2b                                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+_sbrk_r                                           ../Library/syscalls.o
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(freer.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mallocr.o)
+_setlocale_r                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+_sprintf_r                                        c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(sprintf.o)
+_ulp                                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+_vfprintf_r                                       c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(sprintf.o)
+_wcrtomb_r                                        c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcrtomb.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcsrtombs.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+_wcsrtombs_r                                      c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcsrtombs.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+_wctomb_r                                         c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wctomb_r.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcrtomb.o)
+_write_r                                          ../Library/syscalls.o
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(stdio.o)
+accelX                                            ../Library/ADXL345.o
+                                                  main_v20.o
+accelY                                            ../Library/ADXL345.o
+                                                  main_v20.o
+accelZ                                            ../Library/ADXL345.o
+                                                  main_v20.o
+acceleration_x                                    main_v20.o
+acceleration_y                                    main_v20.o
+acceleration_z                                    main_v20.o
+adxl345_read                                      ../Library/ADXL345.o
+                                                  main_v20.o
+adxl345_write                                     ../Library/ADXL345.o
+alarm_set                                         main_v20.o
+battery_level                                     main_v20.o
+bootUp                                            main_v20.o
+config_gps_msgs                                   ../Library/gps.o
+configure_gps_waas                                ../Library/gps.o
+createLogFile                                     main_v20.o
+dd                                                ../Library/rootdir.o
+delay_ms                                          main_v20.o
+                                                  ../Library/SHT15.o
+                                                  ../Library/ADXL345.o
+                                                  ../Library/rprintf.o
+dir_entry                                         ../Library/rootdir.o
+disable_all_gps_msgs                              ../Library/gps.o
+                                                  main_v20.o
+disable_gps_gga_msgs                              ../Library/gps.o
+disable_gps_rmc_msgs                              ../Library/gps.o
+disable_waas                                      ../Library/gps.o
+enable_gps_gga_msgs                               ../Library/gps.o
+enable_gps_rmc_msgs                               ../Library/gps.o
+                                                  main_v20.o
+enable_waas                                       ../Library/gps.o
+                                                  main_v20.o
+end                                               ../Library/syscalls.o
+fat16_close                                       ../Library/fat16.o
+fat16_close_dir                                   ../Library/fat16.o
+fat16_close_file                                  ../Library/fat16.o
+                                                  main_v20.o
+fat16_create_file                                 ../Library/fat16.o
+                                                  ../Library/rootdir.o
+fat16_delete_file                                 ../Library/fat16.o
+                                                  ../Library/rootdir.o
+fat16_file_size                                   ../Library/fat16.o
+fat16_get_dir_entry_of_path                       ../Library/fat16.o
+                                                  ../Library/rootdir.o
+fat16_get_fs_free                                 ../Library/fat16.o
+                                                  ../Library/rootdir.o
+fat16_get_fs_size                                 ../Library/fat16.o
+                                                  ../Library/rootdir.o
+fat16_open                                        ../Library/fat16.o
+                                                  ../Library/rootdir.o
+fat16_open_dir                                    ../Library/fat16.o
+                                                  ../Library/rootdir.o
+fat16_open_file                                   ../Library/fat16.o
+fat16_read_dir                                    ../Library/fat16.o
+                                                  ../Library/rootdir.o
+fat16_read_file                                   ../Library/fat16.o
+fat16_reset_dir                                   ../Library/fat16.o
+                                                  ../Library/rootdir.o
+fat16_resize_file                                 ../Library/fat16.o
+fat16_seek_file                                   ../Library/fat16.o
+fat16_set_dir                                     ../Library/fat16.o
+fat16_write_file                                  ../Library/fat16.o
+                                                  main_v20.o
+fclose                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+fd                                                ../Library/rootdir.o
+fflush                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fflush.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fclose.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+file_name                                         main_v20.o
+final_gps_message_size                            main_v20.o
+final_message                                     main_v20.o
+find_file_in_dir                                  ../Library/fat16.o
+                                                  ../Library/rootdir.o
+format_card                                       ../Library/sd_raw.o
+free                                              c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o)
+                                                  ../Library/partition.o
+                                                  ../Library/fat16.o
+fs                                                ../Library/rootdir.o
+get_adc_1                                         main_v20.o
+getc0                                             ../Library/serial.o
+getc1                                             ../Library/serial.o
+getkey_serial0                                    ../Library/serial.o
+goToSleep                                         main_v20.o
+gps_init_string408                                ../Library/gps.o
+gps_message                                       main_v20.o
+gps_message_complete                              main_v20.o
+gps_message_index                                 main_v20.o
+gps_message_size                                  main_v20.o
+initAccel                                         ../Library/ADXL345.o
+                                                  main_v20.o
+init_serial0                                      ../Library/serial.o
+init_serial1                                      ../Library/serial.o
+                                                  main_v20.o
+initializeGps                                     main_v20.o
+isatty                                            ../Library/syscalls.o
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(makebuf.o)
+isinf                                             c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isinf.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+isnan                                             c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(s_isnan.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+itoa                                              main_v20.o
+led_blink                                         main_v20.o
+localeconv                                        c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+locks                                             ../Library/gps.o
+log_buffer                                        main_v20.o
+log_count                                         main_v20.o
+log_data                                          main_v20.o
+log_data_index                                    main_v20.o
+main                                              main_v20.o
+                                                  Startup.o
+main_msc                                          ../Library/LPCUSB/main_msc.o
+                                                  main_v20.o
+malloc                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(malloc.o)
+                                                  ../Library/partition.o
+                                                  ../Library/fat16.o
+memchr                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memchr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+memcpy                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memcpy.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(mprec.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(dtoa.o)
+                                                  ../Library/LPCUSB/msc_scsi.o
+                                                  ../Library/fat16.o
+                                                  ../Library/sd_raw.o
+memmove                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memmove.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(reallocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(fvwrite.o)
+memset                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(memset.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(callocr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(findfp.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+                                                  ../Library/partition.o
+                                                  ../Library/fat16.o
+                                                  ../Library/sd_raw.o
+new_gps_data                                      main_v20.o
+new_scp_data                                      main_v20.o
+new_sensor_data                                   main_v20.o
+new_sht_data                                      main_v20.o
+nmea_data                                         main_v20.o
+nmea_data_index                                   main_v20.o
+open_file_in_dir                                  ../Library/fat16.o
+                                                  ../Library/rootdir.o
+openroot                                          ../Library/rootdir.o
+                                                  main_v20.o
+parseGGA                                          main_v20.o
+parseRMC                                          main_v20.o
+partition                                         ../Library/rootdir.o
+partition_close                                   ../Library/partition.o
+partition_open                                    ../Library/partition.o
+                                                  ../Library/rootdir.o
+power_register_values                             main_v20.o
+powerdownAccel                                    ../Library/ADXL345.o
+print_disk_info                                   ../Library/rootdir.o
+putc_serial0                                      ../Library/serial.o
+putc_serial1                                      ../Library/serial.o
+                                                  ../Library/gps.o
+                                                  main_v20.o
+putchar_serial0                                   ../Library/serial.o
+putstring_serial0                                 ../Library/serial.o
+readSCP                                           ../Library/SCP1000.o
+                                                  main_v20.o
+read_sensors                                      main_v20.o
+reset                                             main_v20.o
+reverse                                           main_v20.o
+rootDirectory_files                               ../Library/rootdir.o
+rootDirectory_files_stream                        ../Library/rootdir.o
+root_delete                                       ../Library/rootdir.o
+root_disk_info                                    ../Library/rootdir.o
+root_file_exists                                  ../Library/rootdir.o
+                                                  main_v20.o
+root_format                                       ../Library/rootdir.o
+root_open                                         ../Library/rootdir.o
+root_open_new                                     ../Library/rootdir.o
+                                                  main_v20.o
+rprintf                                           ../Library/rprintf.o
+                                                  ../Library/LPCUSB/lpc2000_spi.o
+                                                  ../Library/LPCUSB/blockdev_sd.o
+                                                  ../Library/LPCUSB/main_msc.o
+                                                  ../Library/fat16.o
+                                                  ../Library/sd_raw.o
+                                                  ../Library/rootdir.o
+rprintf_devopen                                   ../Library/rprintf.o
+                                                  main_v20.o
+saveData                                          main_v20.o
+scp_pressure                                      main_v20.o
+scp_temp                                          main_v20.o
+sd_raw_available                                  ../Library/sd_raw.o
+sd_raw_get_info                                   ../Library/sd_raw.o
+                                                  ../Library/rootdir.o
+sd_raw_init                                       ../Library/sd_raw.o
+                                                  main_v20.o
+sd_raw_locked                                     ../Library/sd_raw.o
+sd_raw_read                                       ../Library/sd_raw.o
+                                                  ../Library/rootdir.o
+sd_raw_read_interval                              ../Library/sd_raw.o
+                                                  ../Library/rootdir.o
+sd_raw_sync                                       ../Library/sd_raw.o
+                                                  main_v20.o
+sd_raw_write                                      ../Library/sd_raw.o
+                                                  ../Library/rootdir.o
+setlocale                                         c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+sht15_read                                        ../Library/SHT15.o
+                                                  main_v20.o
+sht15_read_byte                                   ../Library/SHT15.o
+sht15_send_byte                                   ../Library/SHT15.o
+sht15_start                                       ../Library/SHT15.o
+sht_humidity                                      main_v20.o
+sht_temp                                          main_v20.o
+sprintf                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(sprintf.o)
+                                                  ../Library/gps.o
+                                                  main_v20.o
+strchr                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strchr.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strrchr.o)
+                                                  ../Library/fat16.o
+strcmp                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcmp.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(locale.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wctomb_r.o)
+                                                  ../Library/fat16.o
+strcpy                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strcpy.o)
+                                                  main_v20.o
+strlen                                            c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strlen.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wctomb_r.o)
+                                                  c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+                                                  ../Library/gps.o
+                                                  ../Library/fat16.o
+                                                  main_v20.o
+strncmp                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncmp.o)
+                                                  ../Library/fat16.o
+strncpy                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strncpy.o)
+                                                  ../Library/fat16.o
+strrchr                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(strrchr.o)
+                                                  ../Library/fat16.o
+vfprintf                                          c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(vfprintf.o)
+wakeUp                                            main_v20.o
+wake_event                                        main_v20.o
+wcrtomb                                           c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcrtomb.o)
+wcsrtombs                                         c:/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/interwork\libc.a(wcsrtombs.o)
